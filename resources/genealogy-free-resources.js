@@ -5,7 +5,7 @@ window.GENEALOGY_RESOURCES = [
   {
     "id": "uk-freebmd",
     "resourceName": "FreeBMD",
-    "url": "https://www.freebmd.org.uk/search.shtml",
+    "url": "https://www.freebmd.org.uk/",
     "homeUrl": "https://www.freebmd.org.uk/",
     "accessType": "free",
     "scope": {
@@ -416,7 +416,7 @@ window.GENEALOGY_RESOURCES = [
   {
     "id": "uk-nrscotland",
     "resourceName": "National Records of Scotland",
-    "url": "https://www.nrscotland.gov.uk/research/family-history",
+    "url": "https://www.nrscotland.gov.uk/",
     "homeUrl": "https://www.nrscotland.gov.uk/",
     "accessType": "free",
     "scope": {
@@ -455,8 +455,8 @@ window.GENEALOGY_RESOURCES = [
   {
     "id": "uk-proni",
     "resourceName": "PRONI Search Archives Online",
-    "url": "https://www.nidirect.gov.uk/information-and-services/proni-historical-records/search-archives-online",
-    "homeUrl": "https://www.nidirect.gov.uk/proni",
+    "url": "https://www.proni.gov.uk/",
+    "homeUrl": "https://www.proni.gov.uk/",
     "accessType": "free",
     "scope": {
       "countries": [
@@ -489,7 +489,6 @@ window.GENEALOGY_RESOURCES = [
     "id": "uk-groni",
     "resourceName": "GRONI (NI civil registration)",
     "url": "https://geni.nidirect.gov.uk/",
-    "homeUrl": "https://www.nidirect.gov.uk/articles/finding-records-births-deaths-marriages-civil-partnerships-and-adoptions",
     "accessType": "freemium",
     "scope": {
       "countries": [
@@ -673,7 +672,6 @@ window.GENEALOGY_RESOURCES = [
     "id": "au-nsw-bdm",
     "resourceName": "NSW BDM Historical Indexes",
     "url": "https://familyhistory.bdm.nsw.gov.au/lifelink/familyhistory/search",
-    "homeUrl": "https://www.nsw.gov.au/family-and-relationships/births-deaths-marriages",
     "accessType": "free",
     "scope": {
       "countries": [
@@ -811,7 +809,6 @@ window.GENEALOGY_RESOURCES = [
     "id": "au-wa-bdm",
     "resourceName": "Western Australia BDM Online Index",
     "url": "https://bdm.justice.wa.gov.au/_apps/PioneersIndex/default.aspx",
-    "homeUrl": "https://www.wa.gov.au/government/publications/online-index-search-births-deaths-and-marriages",
     "accessType": "free",
     "scope": {
       "countries": [
@@ -956,7 +953,7 @@ window.GENEALOGY_RESOURCES = [
   {
     "id": "au-nt-bdm",
     "resourceName": "Northern Territory BDM Family History Search",
-    "url": "https://nt.gov.au/law/bdm/family-history-search",
+    "url": "https://nt.gov.au/law/bdm",
     "homeUrl": "https://nt.gov.au/law/bdm",
     "accessType": "free",
     "scope": {
@@ -1002,7 +999,7 @@ window.GENEALOGY_RESOURCES = [
   {
     "id": "au-nsw-archives",
     "resourceName": "NSW State Archives Indexes",
-    "url": "https://mhnsw.au/indexes/",
+    "url": "https://mhnsw.au/",
     "homeUrl": "https://mhnsw.au/",
     "accessType": "free",
     "scope": {
@@ -1420,8 +1417,8 @@ window.GENEALOGY_RESOURCES = [
   {
     "id": "ca-lac",
     "resourceName": "Library and Archives Canada",
-    "url": "https://library-archives.canada.ca/eng/collection/research-help/genealogy-family-history/Pages/genealogy-family-history.aspx",
-    "homeUrl": "https://library-archives.canada.ca/",
+    "url": "https://www.canada.ca/en/library-archives/collection/research-help/genealogy-family-history.html",
+    "homeUrl": "https://www.canada.ca/en/library-archives.html",
     "accessType": "free",
     "scope": {
       "countries": [
@@ -1489,7 +1486,7 @@ window.GENEALOGY_RESOURCES = [
     "id": "nz-bdm-historical",
     "resourceName": "NZ BDM Historical Records",
     "url": "https://www.bdmhistoricalrecords.dia.govt.nz/",
-    "homeUrl": "https://www.dia.govt.nz/Births-Deaths-and-Marriages",
+    "homeUrl": "https://www.govt.nz/organisations/births-deaths-and-marriages/",
     "accessType": "free",
     "scope": {
       "countries": [
@@ -1752,7 +1749,7 @@ window.GENEALOGY_RESOURCES = [
       {
         "id": "fmp-1939-register",
         "name": "1939 Register of England and Wales",
-        "url": "https://search.findmypast.co.uk/search-world-records/1939-register-2",
+        "url": "https://www.findmypast.co.uk/1939-register",
         "scope": {
           "countries": [
             "England",
@@ -1771,32 +1768,9 @@ window.GENEALOGY_RESOURCES = [
         "notes": "Wartime national register taken in September 1939 — fills the 1921-1951 census gap (1931 was destroyed in WWII; 1941 not taken)."
       },
       {
-        "id": "fmp-parish-records",
-        "name": "Findmypast UK Parish Records",
-        "url": "https://search.findmypast.co.uk/search-world-records/parish-records",
-        "scope": {
-          "countries": [
-            "England",
-            "Wales"
-          ]
-        },
-        "coverage": [
-          {
-            "events": [
-              "baptism",
-              "marriage",
-              "burial"
-            ],
-            "startYear": 1538,
-            "endYear": 1900
-          }
-        ],
-        "notes": "Aggregated parish baptism/marriage/burial transcriptions and images from many English and Welsh dioceses."
-      },
-      {
         "id": "fmp-irish-records",
         "name": "Ireland Collection",
-        "url": "https://search.findmypast.co.uk/search-world-records?region=Ireland",
+        "url": "https://www.findmypast.co.uk/discover?region=Ireland",
         "scope": {
           "countries": [
             "Ireland",
@@ -1988,7 +1962,7 @@ window.GENEALOGY_RESOURCES = [
   {
     "id": "global-wikitree",
     "resourceName": "WikiTree",
-    "url": "https://www.wikitree.com/wiki/Special:Search",
+    "url": "https://www.wikitree.com/",
     "homeUrl": "https://www.wikitree.com/",
     "accessType": "free-with-login",
     "scope": {
@@ -2018,7 +1992,7 @@ window.GENEALOGY_RESOURCES = [
   {
     "id": "uk-deceased-online",
     "resourceName": "Deceased Online",
-    "url": "https://www.deceasedonline.com/servlet/GSDOSearch",
+    "url": "https://www.deceasedonline.com/",
     "homeUrl": "https://www.deceasedonline.com/",
     "accessType": "paid",
     "scope": {
@@ -2116,131 +2090,6 @@ window.GENEALOGY_RESOURCES = [
         "notes": "Curated links for every type of English record."
       },
       {
-        "id": "cl-scotland",
-        "name": "Scotland directory",
-        "url": "https://www.cyndislist.com/scotland/",
-        "scope": {
-          "countries": [
-            "Scotland"
-          ]
-        },
-        "coverage": [
-          {
-            "events": [
-              "birth",
-              "baptism",
-              "marriage",
-              "death",
-              "burial",
-              "residence",
-              "employment",
-              "education",
-              "travel",
-              "military",
-              "legal",
-              "other"
-            ],
-            "startYear": null,
-            "endYear": null
-          }
-        ],
-        "notes": "Curated links for Scottish parish, civil, military and emigration records."
-      },
-      {
-        "id": "cl-wales",
-        "name": "Wales directory",
-        "url": "https://www.cyndislist.com/wales/",
-        "scope": {
-          "countries": [
-            "Wales"
-          ]
-        },
-        "coverage": [
-          {
-            "events": [
-              "birth",
-              "baptism",
-              "marriage",
-              "death",
-              "burial",
-              "residence",
-              "employment",
-              "education",
-              "travel",
-              "military",
-              "legal",
-              "other"
-            ],
-            "startYear": null,
-            "endYear": null
-          }
-        ],
-        "notes": "Curated links for Welsh records across all topics."
-      },
-      {
-        "id": "cl-ireland",
-        "name": "Ireland directory",
-        "url": "https://www.cyndislist.com/ireland/",
-        "scope": {
-          "countries": [
-            "Ireland",
-            "Northern Ireland"
-          ]
-        },
-        "coverage": [
-          {
-            "events": [
-              "birth",
-              "baptism",
-              "marriage",
-              "death",
-              "burial",
-              "residence",
-              "employment",
-              "education",
-              "travel",
-              "military",
-              "legal",
-              "other"
-            ],
-            "startYear": null,
-            "endYear": null
-          }
-        ],
-        "notes": "Curated links for both Republic and Northern Ireland records."
-      },
-      {
-        "id": "cl-australia",
-        "name": "Australia directory",
-        "url": "https://www.cyndislist.com/au/",
-        "scope": {
-          "countries": [
-            "Australia"
-          ]
-        },
-        "coverage": [
-          {
-            "events": [
-              "birth",
-              "baptism",
-              "marriage",
-              "death",
-              "burial",
-              "residence",
-              "employment",
-              "education",
-              "travel",
-              "military",
-              "legal",
-              "other"
-            ],
-            "startYear": null,
-            "endYear": null
-          }
-        ],
-        "notes": "Curated links for Australian records across all states and topics."
-      },
-      {
         "id": "cl-canada",
         "name": "Canada directory",
         "url": "https://www.cyndislist.com/canada/",
@@ -2334,22 +2183,6 @@ window.GENEALOGY_RESOURCES = [
         "notes": "Curated links for German parish, civil and emigration records."
       },
       {
-        "id": "cl-military",
-        "name": "Military category",
-        "url": "https://www.cyndislist.com/military/",
-        "scope": {},
-        "coverage": [
-          {
-            "events": [
-              "military"
-            ],
-            "startYear": null,
-            "endYear": null
-          }
-        ],
-        "notes": "Worldwide military record links — service rolls, war casualties, regimental histories."
-      },
-      {
         "id": "cl-immigration",
         "name": "Immigration & Naturalization category",
         "url": "https://www.cyndislist.com/immigration/",
@@ -2403,7 +2236,7 @@ window.GENEALOGY_RESOURCES = [
   {
     "id": "au-awm",
     "resourceName": "Australian War Memorial",
-    "url": "https://www.awm.gov.au/collection/people",
+    "url": "https://www.awm.gov.au/",
     "homeUrl": "https://www.awm.gov.au/",
     "accessType": "free",
     "scope": {
@@ -2635,7 +2468,7 @@ window.GENEALOGY_RESOURCES = [
   {
     "id": "au-naa",
     "resourceName": "National Archives of Australia",
-    "url": "https://recordsearch.naa.gov.au/SearchNRetrieve/Interface/SearchScreens/BasicSearch.aspx",
+    "url": "https://www.naa.gov.au/",
     "homeUrl": "https://www.naa.gov.au/",
     "accessType": "free",
     "scope": {
@@ -2704,8 +2537,8 @@ window.GENEALOGY_RESOURCES = [
   {
     "id": "au-qsa",
     "resourceName": "Queensland State Archives (QSA)",
-    "url": "https://www.archives.qld.gov.au/explore-collection/genealogy",
-    "homeUrl": "https://www.archives.qld.gov.au/",
+    "url": "https://www.qld.gov.au/recreation/arts/heritage/archives",
+    "homeUrl": "https://www.qld.gov.au/recreation/arts/heritage/archives",
     "accessType": "free",
     "scope": {
       "countries": [
@@ -2741,7 +2574,6 @@ window.GENEALOGY_RESOURCES = [
     "id": "au-srowa",
     "resourceName": "State Records Office of Western Australia",
     "url": "https://archive.sro.wa.gov.au/",
-    "homeUrl": "https://www.wa.gov.au/organisation/state-records-office",
     "accessType": "free",
     "scope": {
       "countries": [
@@ -2776,7 +2608,7 @@ window.GENEALOGY_RESOURCES = [
   {
     "id": "au-srsa",
     "resourceName": "State Records of South Australia",
-    "url": "https://archives.sa.gov.au/finding-information/family-history",
+    "url": "https://archives.sa.gov.au/",
     "homeUrl": "https://archives.sa.gov.au/",
     "accessType": "free",
     "scope": {
@@ -2842,7 +2674,7 @@ window.GENEALOGY_RESOURCES = [
   {
     "id": "uk-nlw",
     "resourceName": "National Library of Wales — Family History",
-    "url": "https://www.library.wales/discover-learn/digital-exhibitions/family-history",
+    "url": "https://www.library.wales/",
     "homeUrl": "https://www.library.wales/",
     "accessType": "free",
     "scope": {
@@ -2909,8 +2741,8 @@ window.GENEALOGY_RESOURCES = [
   {
     "id": "uk-sog",
     "resourceName": "Society of Genealogists (London)",
-    "url": "https://www.sog.org.uk/search-records/",
-    "homeUrl": "https://www.sog.org.uk/",
+    "url": "https://sog.org.uk/",
+    "homeUrl": "https://sog.org.uk/",
     "accessType": "paid",
     "scope": {
       "countries": [
@@ -2947,7 +2779,7 @@ window.GENEALOGY_RESOURCES = [
   {
     "id": "global-cwgc",
     "resourceName": "Commonwealth War Graves Commission",
-    "url": "https://www.cwgc.org/find-records/find-war-dead/",
+    "url": "https://www.cwgc.org/",
     "homeUrl": "https://www.cwgc.org/",
     "accessType": "free",
     "scope": {
@@ -3007,8 +2839,8 @@ window.GENEALOGY_RESOURCES = [
   {
     "id": "paid-forces-war-records",
     "resourceName": "Forces War Records",
-    "url": "https://www.forces-war-records.co.uk/search/",
-    "homeUrl": "https://www.forces-war-records.co.uk/",
+    "url": "https://uk.forceswarrecords.com/search",
+    "homeUrl": "https://uk.forceswarrecords.com/",
     "accessType": "paid",
     "scope": {
       "countries": [
@@ -3068,7 +2900,7 @@ window.GENEALOGY_RESOURCES = [
   {
     "id": "global-geneanet",
     "resourceName": "Geneanet",
-    "url": "https://en.geneanet.org/search/",
+    "url": "https://en.geneanet.org/",
     "homeUrl": "https://en.geneanet.org/",
     "accessType": "freemium",
     "scope": {
@@ -3106,7 +2938,7 @@ window.GENEALOGY_RESOURCES = [
   {
     "id": "paid-rootsireland",
     "resourceName": "RootsIreland",
-    "url": "https://www.rootsireland.ie/search/",
+    "url": "https://www.rootsireland.ie/",
     "homeUrl": "https://www.rootsireland.ie/",
     "accessType": "paid",
     "scope": {
