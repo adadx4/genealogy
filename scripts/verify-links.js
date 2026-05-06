@@ -36,6 +36,7 @@ const ANTI_SCRAPING_FALSE_POSITIVES = new Set([
   'ca-ontario-archives',     // perfdrive.com bot-detection middleware
   'ca-banq',                 // perfdrive.com bot-detection middleware
   'asia-philippine-archives',// 403 on scripted access
+  'eu-be-state-archives',    // 403 on scripted access
 ]);
 
 // Resources where intermittent fetch failures (DNS/network) have been observed
@@ -54,6 +55,12 @@ const KNOWN_FLAKY = new Set([
   'paid-prdh-igd',
   'paid-myheritage',          // intermittent fetch failures
   'au-mariners-ships',        // mariners.records.nsw.gov.au — slow, intermittent fetch failures
+  'de-matricula',             // 503s on bursty checks; site is fine in browsers
+  'eu-no-digitalarkivet',     // intermittent fetch failures from this checker
+  'eu-se-riksarkivet',        // riksarkivet.se main site flaky; sok.riksarkivet.se OK
+  'eu-cz-portafontium',       // intermittent fetch failures
+  'eu-fi-kansallisarkisto',   // astia.narc.fi blocks scripted access
+  'eu-es-pares',              // pares.cultura.gob.es blocks scripted access
 ]);
 
 function flatten(resources) {

@@ -4585,5 +4585,533 @@ window.GENEALOGY_RESOURCES = [
     ],
     "bestFor": "Mexican federal records — colonial, Inquisition, land grants, civil and military",
     "notes": "AGN holds the colonial-era Ramo de la Inquisición, Mercedes (land grants), and civil registration backups. Some collections digitised; many require a visit."
+  },
+  {
+    "id": "eu-it-antenati",
+    "resourceName": "Antenati (Portale Antenati)",
+    "url": "https://antenati.cultura.gov.it/",
+    "homeUrl": "https://antenati.cultura.gov.it/",
+    "accessType": "free",
+    "scope": {
+      "countries": [
+        "Italy"
+      ],
+      "alsoCovers": [],
+      "stateProvince": null,
+      "county": null,
+      "parish": null,
+      "religion": "any"
+    },
+    "coverage": [
+      {
+        "events": [
+          "birth",
+          "baptism",
+          "marriage",
+          "death",
+          "burial",
+          "residence",
+          "legal"
+        ],
+        "startYear": 1500,
+        "endYear": 1940
+      }
+    ],
+    "bestFor": "Italian state archives — civil registration, parish duplicates, conscription rolls",
+    "notes": "Free, no registration. Hosted by the Ministry of Culture. Coverage varies by province; Napoleonic-era civil records (1809-1815) and post-unification civil records (1866+) are extensive."
+  },
+  {
+    "id": "eu-nl-wiewaswie",
+    "resourceName": "WieWasWie",
+    "url": "https://www.wiewaswie.nl/",
+    "homeUrl": "https://www.wiewaswie.nl/",
+    "accessType": "free-with-login",
+    "scope": {
+      "countries": [
+        "Netherlands"
+      ],
+      "alsoCovers": [],
+      "stateProvince": null,
+      "county": null,
+      "parish": null,
+      "religion": "any"
+    },
+    "coverage": [
+      {
+        "events": [
+          "birth",
+          "baptism",
+          "marriage",
+          "death",
+          "burial",
+          "residence"
+        ],
+        "startYear": 1500,
+        "endYear": 1960
+      }
+    ],
+    "bestFor": "Aggregated index of Dutch civil registration and church records from regional archives",
+    "notes": "Free with a login. Combines records from CBG, Nationaal Archief and provincial archives."
+  },
+  {
+    "id": "eu-no-digitalarkivet",
+    "resourceName": "Digitalarkivet (National Archives of Norway)",
+    "url": "https://www.digitalarkivet.no/en/",
+    "homeUrl": "https://www.digitalarkivet.no/",
+    "accessType": "free",
+    "scope": {
+      "countries": [
+        "Norway"
+      ],
+      "alsoCovers": [],
+      "stateProvince": null,
+      "county": null,
+      "parish": null,
+      "religion": "any"
+    },
+    "coverage": [
+      {
+        "events": [
+          "birth",
+          "baptism",
+          "marriage",
+          "death",
+          "burial",
+          "residence",
+          "travel",
+          "military",
+          "legal",
+          "employment",
+          "education"
+        ],
+        "startYear": 1500,
+        "endYear": 1960
+      }
+    ],
+    "bestFor": "Norway parish registers, censuses, emigration lists, court records — fully free",
+    "notes": "One of the most generous national archive portals anywhere. English interface available; censuses 1801-1910 fully indexed; parish registers digitised back to the 1600s."
+  },
+  {
+    "id": "eu-se-riksarkivet",
+    "resourceName": "Riksarkivet / SVAR (Sweden)",
+    "url": "https://sok.riksarkivet.se/",
+    "homeUrl": "https://riksarkivet.se/",
+    "accessType": "freemium",
+    "scope": {
+      "countries": [
+        "Sweden"
+      ],
+      "alsoCovers": [],
+      "stateProvince": null,
+      "county": null,
+      "parish": null,
+      "religion": "any"
+    },
+    "coverage": [
+      {
+        "events": [
+          "birth",
+          "baptism",
+          "marriage",
+          "death",
+          "burial",
+          "residence",
+          "military",
+          "legal"
+        ],
+        "startYear": 1500,
+        "endYear": 1960
+      }
+    ],
+    "bestFor": "Swedish state archives — Husförhörslängder (household examination), parish registers, military, court",
+    "notes": "Index search free. Many digital images free; some collections via SVAR require credits or a subscription via ArkivDigital."
+  },
+  {
+    "id": "eu-dk-arkivalieronline",
+    "resourceName": "Arkivalieronline (Rigsarkivet, Denmark)",
+    "url": "https://www.sa.dk/ao-soegesider/da/billedviser",
+    "homeUrl": "https://www.sa.dk/",
+    "accessType": "free",
+    "scope": {
+      "countries": [
+        "Denmark",
+        "Greenland",
+        "Iceland"
+      ],
+      "alsoCovers": [],
+      "stateProvince": null,
+      "county": null,
+      "parish": null,
+      "religion": "any"
+    },
+    "coverage": [
+      {
+        "events": [
+          "birth",
+          "baptism",
+          "marriage",
+          "death",
+          "burial",
+          "residence",
+          "military",
+          "legal"
+        ],
+        "startYear": 1645,
+        "endYear": 1960
+      }
+    ],
+    "bestFor": "Danish parish registers, censuses 1787-1940, probate, military levying rolls",
+    "notes": "Free, fully digitised images (transcription via volunteer projects). Includes Greenland and Iceland records up to their independence."
+  },
+  {
+    "id": "eu-fi-kansallisarkisto",
+    "resourceName": "Kansallisarkisto (National Archives of Finland)",
+    "url": "https://astia.narc.fi/uusiastia/",
+    "homeUrl": "https://www.arkisto.fi/",
+    "accessType": "free",
+    "scope": {
+      "countries": [
+        "Finland"
+      ],
+      "alsoCovers": [],
+      "stateProvince": null,
+      "county": null,
+      "parish": null,
+      "religion": "any"
+    },
+    "coverage": [
+      {
+        "events": [
+          "birth",
+          "baptism",
+          "marriage",
+          "death",
+          "burial",
+          "residence",
+          "military",
+          "legal"
+        ],
+        "startYear": 1600,
+        "endYear": 1960
+      }
+    ],
+    "bestFor": "Finnish church records (Lutheran and Orthodox), military, court, civil registration",
+    "notes": "Astia is the public catalogue. Most Lutheran parish books are digitised free; Karelian (lost-territory) records also covered."
+  },
+  {
+    "id": "eu-be-state-archives",
+    "resourceName": "Belgian State Archives",
+    "url": "https://search.arch.be/",
+    "homeUrl": "https://www.arch.be/",
+    "accessType": "free-with-login",
+    "scope": {
+      "countries": [
+        "Belgium"
+      ],
+      "alsoCovers": [],
+      "stateProvince": null,
+      "county": null,
+      "parish": null,
+      "religion": "any"
+    },
+    "coverage": [
+      {
+        "events": [
+          "birth",
+          "baptism",
+          "marriage",
+          "death",
+          "burial",
+          "residence",
+          "military",
+          "legal"
+        ],
+        "startYear": 1500,
+        "endYear": 1920
+      }
+    ],
+    "bestFor": "Belgian parish and civil registers — Flanders, Wallonia and Brussels",
+    "notes": "Free with login. Digitised images for parish records and civil registers up to the 100-year/120-year privacy cutoff."
+  },
+  {
+    "id": "eu-pl-szukaj",
+    "resourceName": "Szukaj w Archiwach (Polish State Archives)",
+    "url": "https://www.szukajwarchiwach.gov.pl/",
+    "homeUrl": "https://www.szukajwarchiwach.gov.pl/",
+    "accessType": "free",
+    "scope": {
+      "countries": [
+        "Poland"
+      ],
+      "alsoCovers": [],
+      "stateProvince": null,
+      "county": null,
+      "parish": null,
+      "religion": "any"
+    },
+    "coverage": [
+      {
+        "events": [
+          "birth",
+          "baptism",
+          "marriage",
+          "death",
+          "burial",
+          "residence",
+          "military",
+          "legal"
+        ],
+        "startYear": 1500,
+        "endYear": 1950
+      }
+    ],
+    "bestFor": "Polish state archives — Catholic, Lutheran, Orthodox and Jewish parish records",
+    "notes": "Free, no registration. Covers former Polish-Lithuanian Commonwealth territories (now spanning Poland, Belarus, Lithuania, Ukraine). Strong for Galician and Russian-partition records."
+  },
+  {
+    "id": "eu-es-pares",
+    "resourceName": "PARES (Portal de Archivos Españoles)",
+    "url": "https://pares.cultura.gob.es/",
+    "homeUrl": "https://pares.cultura.gob.es/",
+    "accessType": "free",
+    "scope": {
+      "countries": [
+        "Spain"
+      ],
+      "alsoCovers": [],
+      "stateProvince": null,
+      "county": null,
+      "parish": null,
+      "religion": "any"
+    },
+    "coverage": [
+      {
+        "events": [
+          "birth",
+          "baptism",
+          "marriage",
+          "death",
+          "burial",
+          "residence",
+          "travel",
+          "military",
+          "legal"
+        ],
+        "startYear": 1500,
+        "endYear": 1900
+      }
+    ],
+    "bestFor": "Spanish state archives — Inquisition, military, ship lists to the Americas, colonial records",
+    "notes": "Free, no registration. Particularly strong for the Archivo General de Indias (AGI) for Spanish colonial families."
+  },
+  {
+    "id": "eu-pt-digitarq",
+    "resourceName": "DigitArq (Portuguese National Archives)",
+    "url": "https://digitarq.arquivos.pt/",
+    "homeUrl": "https://digitarq.arquivos.pt/",
+    "accessType": "free",
+    "scope": {
+      "countries": [
+        "Portugal",
+        "Brazil"
+      ],
+      "alsoCovers": [],
+      "stateProvince": null,
+      "county": null,
+      "parish": null,
+      "religion": "any"
+    },
+    "coverage": [
+      {
+        "events": [
+          "birth",
+          "baptism",
+          "marriage",
+          "death",
+          "burial",
+          "residence",
+          "travel",
+          "military",
+          "legal"
+        ],
+        "startYear": 1500,
+        "endYear": 1920
+      }
+    ],
+    "bestFor": "Portuguese state archives — Torre do Tombo, Inquisition, parish, notarial, colonial Brazil",
+    "notes": "Free. Includes Tombo Antigo (medieval) records and the early colonial Brazil inquisition files."
+  },
+  {
+    "id": "eu-hu-hungaricana",
+    "resourceName": "Hungaricana (Hungarian National Archives)",
+    "url": "https://archives.hungaricana.hu/",
+    "homeUrl": "https://hungaricana.hu/",
+    "accessType": "free",
+    "scope": {
+      "countries": [
+        "Hungary",
+        "Slovakia",
+        "Romania",
+        "Croatia",
+        "Serbia"
+      ],
+      "alsoCovers": [],
+      "stateProvince": null,
+      "county": null,
+      "parish": null,
+      "religion": "any"
+    },
+    "coverage": [
+      {
+        "events": [
+          "birth",
+          "baptism",
+          "marriage",
+          "death",
+          "burial",
+          "residence",
+          "military",
+          "legal"
+        ],
+        "startYear": 1500,
+        "endYear": 1900
+      }
+    ],
+    "bestFor": "Hungarian Kingdom-era civil and church records (covers modern Hungary, Slovakia, Transylvania and parts of the former Yugoslavia)",
+    "notes": "Free. The collection spans the historic Kingdom of Hungary, so it is essential for ancestry research across the post-1920 successor states."
+  },
+  {
+    "id": "eu-cz-portafontium",
+    "resourceName": "Portafontium (Czech-Bavarian parish registers)",
+    "url": "https://www.portafontium.eu/",
+    "homeUrl": "https://www.portafontium.eu/",
+    "accessType": "free",
+    "scope": {
+      "countries": [
+        "Czech Republic",
+        "Germany"
+      ],
+      "alsoCovers": [],
+      "stateProvince": null,
+      "county": null,
+      "parish": null,
+      "religion": "Catholic"
+    },
+    "coverage": [
+      {
+        "events": [
+          "baptism",
+          "marriage",
+          "burial"
+        ],
+        "startYear": 1500,
+        "endYear": 1900
+      }
+    ],
+    "bestFor": "Free digitised Catholic parish registers from western Bohemia and adjacent Bavarian dioceses",
+    "notes": "Cross-border project of the State Regional Archive in Plzeň and the Bavarian State Archives. Excellent for Sudeten-German ancestry."
+  },
+  {
+    "id": "eu-ee-saaga",
+    "resourceName": "Saaga (National Archives of Estonia)",
+    "url": "https://www.ra.ee/en/",
+    "homeUrl": "https://www.ra.ee/",
+    "accessType": "free-with-login",
+    "scope": {
+      "countries": [
+        "Estonia"
+      ],
+      "alsoCovers": [],
+      "stateProvince": null,
+      "county": null,
+      "parish": null,
+      "religion": "any"
+    },
+    "coverage": [
+      {
+        "events": [
+          "birth",
+          "baptism",
+          "marriage",
+          "death",
+          "burial",
+          "residence",
+          "military",
+          "legal"
+        ],
+        "startYear": 1500,
+        "endYear": 1940
+      }
+    ],
+    "bestFor": "Estonian church records — Lutheran, Orthodox, Catholic — plus revision lists and civil registration",
+    "notes": "Free with registration. The \"Pärsised\" (revision lists / soul revisions) are a key resource for tax-paying populations under Russian rule."
+  },
+  {
+    "id": "eu-lv-raduraksti",
+    "resourceName": "Raduraksti (Latvian State Archives)",
+    "url": "https://www.lvva-raduraksti.lv/en.html",
+    "homeUrl": "https://www.lvva-raduraksti.lv/",
+    "accessType": "free-with-login",
+    "scope": {
+      "countries": [
+        "Latvia"
+      ],
+      "alsoCovers": [],
+      "stateProvince": null,
+      "county": null,
+      "parish": null,
+      "religion": "any"
+    },
+    "coverage": [
+      {
+        "events": [
+          "birth",
+          "baptism",
+          "marriage",
+          "death",
+          "burial",
+          "residence",
+          "legal"
+        ],
+        "startYear": 1600,
+        "endYear": 1940
+      }
+    ],
+    "bestFor": "Latvian church records (Lutheran, Catholic, Orthodox), revision lists, vital records",
+    "notes": "Free with registration. English interface available. Covers Courland, Vidzeme and Latgale records under Russian and German Baltic governance."
+  },
+  {
+    "id": "eu-lt-epaveldas",
+    "resourceName": "ePaveldas (Lithuanian Heritage Portal)",
+    "url": "https://www.epaveldas.lt/en/home",
+    "homeUrl": "https://www.epaveldas.lt/",
+    "accessType": "free",
+    "scope": {
+      "countries": [
+        "Lithuania"
+      ],
+      "alsoCovers": [],
+      "stateProvince": null,
+      "county": null,
+      "parish": null,
+      "religion": "any"
+    },
+    "coverage": [
+      {
+        "events": [
+          "birth",
+          "baptism",
+          "marriage",
+          "death",
+          "burial",
+          "residence",
+          "legal"
+        ],
+        "startYear": 1600,
+        "endYear": 1940
+      }
+    ],
+    "bestFor": "Lithuanian church metric books — Catholic, Lutheran, Orthodox, Jewish",
+    "notes": "Free. Includes records for territories that are now in Poland, Belarus and Russia (the historic Grand Duchy and inter-war Lithuania)."
   }
 ];
