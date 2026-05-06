@@ -23,6 +23,15 @@
       </p>
     </header>
 
+    <details id="catalogue-browser" class="panel catalogue-browser" open>
+      <summary>Browse the current catalogue (<span id="catalogue-count">0</span> resources)</summary>
+      <div class="catalogue-content">
+        <input type="search" id="catalogue-filter" placeholder="Filter by name, country, county, or ID…" autocomplete="off">
+        <div id="catalogue-meta" class="catalogue-meta"></div>
+        <ul id="catalogue-list" class="catalogue-list"></ul>
+      </div>
+    </details>
+
     <form id="add-form" class="panel">
       <fieldset>
         <legend>1. Identity</legend>

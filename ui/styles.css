@@ -413,6 +413,164 @@ label small.form-warning {
   text-decoration: underline;
 }
 
+/* --- catalogue browser on add-resource.html ------------------------------ */
+
+.catalogue-browser {
+  padding: 16px 24px;
+}
+
+.catalogue-browser > summary {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 8px 0;
+  list-style: revert;
+  user-select: none;
+}
+
+.catalogue-browser > summary:hover {
+  color: #1f6feb;
+}
+
+.catalogue-content {
+  margin-top: 12px;
+}
+
+.catalogue-content > input[type="search"] {
+  margin-bottom: 8px;
+}
+
+.catalogue-meta {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 4px 0 8px;
+  min-height: 1.2em;
+}
+
+.catalogue-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 420px;
+  overflow-y: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.catalogue-item {
+  padding: 10px 14px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.catalogue-item:last-child {
+  border-bottom: none;
+}
+
+.catalogue-empty {
+  padding: 16px;
+  text-align: center;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.cat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cat-name {
+  font-weight: 600;
+  color: #1f6feb;
+  text-decoration: none;
+}
+
+.cat-name:hover {
+  text-decoration: underline;
+}
+
+.cat-meta {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.cat-access {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #4a5568;
+  background: #e2e8f0;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.cat-access-paid {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.cat-access-free {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.cat-id {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.75rem;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.cat-scope {
+  font-size: 0.85rem;
+  color: #4a5568;
+  margin-top: 2px;
+}
+
+.cat-subcollections {
+  list-style: none;
+  padding: 4px 0 0;
+  margin: 6px 0 0 4px;
+  font-size: 0.85rem;
+  color: #4a5568;
+}
+
+.cat-sub-item {
+  padding: 3px 0 3px 10px;
+  border-left: 2px solid #cbd5e1;
+  margin-bottom: 2px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  align-items: baseline;
+}
+
+.cat-sub-name {
+  font-weight: 500;
+  color: #334155;
+}
+
+.cat-sub-meta {
+  font-size: 0.78rem;
+  color: #64748b;
+  font-variant-numeric: tabular-nums;
+}
+
+.cat-sub-id {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.7rem;
+  color: #94a3b8;
+  background: #f1f5f9;
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
 .note-panel ul {
   padding-left: 18px;
 }

@@ -154,6 +154,93 @@ function parseCsv(text) {
   return text.split(',').map((s) => s.trim()).filter(Boolean);
 }
 
+// Catalogue browser ---------------------------------------------------------
+const catalogueListEl = document.getElementById('catalogue-list');
+const catalogueFilterEl = document.getElementById('catalogue-filter');
+const catalogueMetaEl = document.getElementById('catalogue-meta');
+const catalogueCountEl = document.getElementById('catalogue-count');
+
+const allResourcesSorted = (window.GENEALOGY_RESOURCES || [])
+  .slice()
+  .sort((a, b) => a.resourceName.localeCompare(b.resourceName));
+
+catalogueCountEl.textContent = allResourcesSorted.length;
+
+function escapeHtml(text) {
+  return String(text ?? '').replace(/[&<>"']/g, (c) => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[c]));
+}
+
+function describeScopeShort(r) {
+  const scope = r.scope || {};
+  const parts = [];
+  if (scope.parish) parts.push(scope.parish);
+  if (scope.county) parts.push(scope.county);
+  if (scope.stateProvince) parts.push(scope.stateProvince);
+  if ((scope.countries || []).length > 0) parts.push(scope.countries.join(' / '));
+  else if (parts.length === 0) parts.push('Global / multi-country');
+  if (scope.religion && scope.religion !== 'any') parts.push(`${scope.religion} only`);
+  return parts.join(' — ');
+}
+
+function renderCatalogue(filterText = '') {
+  const f = filterText.trim().toLowerCase();
+  const matches = (text) => f === '' || (text || '').toString().toLowerCase().includes(f);
+
+  const filtered = allResourcesSorted.filter((r) => {
+    if (matches(r.id) || matches(r.resourceName)) return true;
+    const scope = r.scope || {};
+    if ((scope.countries || []).some((c) => matches(c))) return true;
+    if ((scope.alsoCovers || []).some((c) => matches(c))) return true;
+    if (matches(scope.stateProvince) || matches(scope.county) || matches(scope.parish)) return true;
+    if ((r.collections || []).some((c) => matches(c.id) || matches(c.name))) return true;
+    return false;
+  });
+
+  catalogueMetaEl.textContent = f
+    ? `Showing ${filtered.length} of ${allResourcesSorted.length} resources matching "${filterText}"`
+    : '';
+
+  if (filtered.length === 0) {
+    catalogueListEl.innerHTML = '<li class="catalogue-empty">No resources match that filter.</li>';
+    return;
+  }
+
+  catalogueListEl.innerHTML = filtered.map((r) => {
+    const access = r.accessType || 'unknown';
+    const scopeText = describeScopeShort(r);
+    const collections = (r.collections || [])
+      .map((c) => {
+        const coverage = (c.coverage && c.coverage[0]) || {};
+        const events = (coverage.events || []).slice(0, 3).join(', ');
+        const rest = (coverage.events || []).length > 3 ? ` +${coverage.events.length - 3}` : '';
+        const start = coverage.startYear ?? '…';
+        const end = coverage.endYear ?? 'present';
+        return `<li class="cat-sub-item">
+          <span class="cat-sub-name">${escapeHtml(c.name)}</span>
+          <span class="cat-sub-meta">${escapeHtml(events + rest)} · ${escapeHtml(`${start}–${end}`)}</span>
+          <code class="cat-sub-id">${escapeHtml(c.id)}</code>
+        </li>`;
+      })
+      .join('');
+    return `<li class="catalogue-item access-${escapeHtml(access)}">
+      <div class="cat-row">
+        <a class="cat-name" href="${escapeHtml(r.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(r.resourceName)}</a>
+        <span class="cat-meta">
+          <span class="cat-access cat-access-${escapeHtml(access)}">${escapeHtml(access)}</span>
+          <code class="cat-id">${escapeHtml(r.id)}</code>
+        </span>
+      </div>
+      <div class="cat-scope">${escapeHtml(scopeText)}</div>
+      ${collections ? `<ul class="cat-subcollections">${collections}</ul>` : ''}
+    </li>`;
+  }).join('');
+}
+
+catalogueFilterEl.addEventListener('input', (e) => renderCatalogue(e.target.value));
+renderCatalogue();
+
 // Copy button ---------------------------------------------------------------
 document.getElementById('copy-output').addEventListener('click', () => {
   const text = outputEl.textContent;
