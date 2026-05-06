@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Genealogy Search Guide</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header>
+      <h1>Genealogy Record Search Assistant</h1>
+      <p>Filter the catalogue of free and paid record collections by place, date and event. Every collection that matches the filters is listed, with a link to its search page.</p>
+    </header>
+
+    <section class="panel">
+      <form id="search-form">
+        <div class="form-columns">
+          <div class="form-column">
+            <fieldset>
+              <legend>1. Event type</legend>
+              <select id="eventType">
+                <option value="">Choose an event</option>
+                <option value="birth">Birth</option>
+                <option value="baptism">Baptism</option>
+                <option value="marriage">Marriage</option>
+                <option value="death">Death</option>
+                <option value="burial">Burial</option>
+                <option value="residence">Residence (census, directories, electoral rolls)</option>
+                <option value="employment">Employment / occupational</option>
+                <option value="education">Education / schools</option>
+                <option value="travel">Travel / immigration / emigration</option>
+                <option value="military">Military</option>
+                <option value="legal">Legal (wills, probate, court, land)</option>
+                <option value="other">Other</option>
+              </select>
+            </fieldset>
+
+            <fieldset>
+              <legend>2. Location</legend>
+              <label>
+                Country
+                <input id="country" type="text" placeholder="Australia, England, Ireland, Scotland..." list="countries" />
+              </label>
+              <label>
+                State / province / region
+                <input id="stateProvince" type="text" placeholder="NSW, Victoria, Northern Ireland..." list="states" />
+              </label>
+              <label>
+                County / district
+                <input id="county" type="text" placeholder="Lancashire, Cheshire, Yorkshire..." list="counties" />
+              </label>
+              <label>
+                Town / parish
+                <input id="townParish" type="text" placeholder="St Albans" />
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="form-column">
+            <fieldset>
+              <legend>3. Date range</legend>
+              <label>
+                Start year
+                <input id="rangeStartYear" type="number" min="1500" max="2100" placeholder="1870" />
+              </label>
+              <label>
+                End year
+                <input id="rangeEndYear" type="number" min="1500" max="2100" placeholder="1890" />
+              </label>
+            </fieldset>
+
+            <fieldset>
+              <legend>4. Religion (optional)</legend>
+              <label>
+                Religion or denomination
+                <select id="religion">
+                  <option value="any">Any / Unknown</option>
+                  <option value="Catholic">Catholic</option>
+                  <option value="Protestant">Protestant</option>
+                  <option value="Jewish">Jewish</option>
+                  <option value="LDS">LDS</option>
+                  <option value="Orthodox">Orthodox</option>
+                  <option value="Other">Other</option>
+                </select>
+              </label>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="submit" id="submitButton" disabled>Loading resources...</button>
+          <button type="button" id="resetButton" class="secondary">Reset</button>
+        </div>
+
+        <datalist id="countries">
+          <option value="Australia">
+          <option value="England">
+          <option value="Wales">
+          <option value="Scotland">
+          <option value="Ireland">
+          <option value="Northern Ireland">
+          <option value="United Kingdom">
+          <option value="United States">
+          <option value="Canada">
+          <option value="New Zealand">
+          <option value="Germany">
+        </datalist>
+
+        <datalist id="states">
+          <option value="New South Wales">
+          <option value="Victoria">
+          <option value="Queensland">
+          <option value="Western Australia">
+          <option value="South Australia">
+          <option value="Tasmania">
+          <option value="Northern Territory">
+        </datalist>
+
+        <datalist id="counties">
+          <option value="Lancashire">
+          <option value="Cheshire">
+          <option value="Yorkshire">
+        </datalist>
+      </form>
+    </section>
+
+    <section id="results" class="panel hidden">
+      <h2>Matching resources</h2>
+      <div id="results-summary" class="results-summary"></div>
+      <div id="results-explanation" class="results-explanation"></div>
+      <ul id="results-list" class="results-list"></ul>
+    </section>
+
+    <section class="panel note-panel">
+      <h2>How to use it</h2>
+      <ul>
+        <li>Choose one event at a time and enter as much location and date detail as you know.</li>
+        <li>Every collection that overlaps your filters is listed — most specific first.</li>
+        <li>Empty fields act as wildcards. Clear the county/parish to broaden the search.</li>
+        <li>Each result links to the collection's search page (or its homepage where no deep link exists).</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="../resources/genealogy-free-resources.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

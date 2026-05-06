@@ -1,0 +1,85 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GenealogySearchQuery",
+  "type": "object",
+  "properties": {
+    "eventType": {
+      "type": "string",
+      "enum": ["birth", "baptism", "marriage", "death", "burial", "census"]
+    },
+    "name": {
+      "type": "object",
+      "properties": {
+        "given": { "type": "string" },
+        "surname": { "type": "string" },
+        "alternateSpelling": { "type": "string" }
+      },
+      "required": ["surname"]
+    },
+    "date": {
+      "type": "object",
+      "properties": {
+        "year": { "type": "integer" },
+        "month": { "type": "integer", "minimum": 1, "maximum": 12 },
+        "day": { "type": "integer", "minimum": 1, "maximum": 31 },
+        "rangeStartYear": { "type": "integer" },
+        "rangeEndYear": { "type": "integer" }
+      },
+      "anyOf": [
+        { "required": ["year"] },
+        { "required": ["rangeStartYear", "rangeEndYear"] }
+      ]
+    },
+    "location": {
+      "type": "object",
+      "properties": {
+        "country": { "type": "string" },
+        "stateProvince": { "type": "string" },
+        "county": { "type": "string" },
+        "townParish": { "type": "string" },
+        "churchName": { "type": "string" }
+      },
+      "required": ["country"]
+    },
+    "family": {
+      "type": "object",
+      "properties": {
+        "father": {
+          "type": "object",
+          "properties": {
+            "given": { "type": "string" },
+            "surname": { "type": "string" },
+            "occupation": { "type": "string" }
+          }
+        },
+        "mother": {
+          "type": "object",
+          "properties": {
+            "given": { "type": "string" },
+            "surname": { "type": "string" }
+          }
+        },
+        "spouse": {
+          "type": "object",
+          "properties": {
+            "given": { "type": "string" },
+            "surname": { "type": "string" }
+          }
+        }
+      }
+    },
+    "religion": {
+      "type": "string",
+      "enum": ["any", "Catholic", "Protestant", "Jewish", "LDS", "Orthodox", "Other"]
+    },
+    "sourceClue": {
+      "type": "string",
+      "description": "A clue from another record, family story, cemetery inscription, or prior search result."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Any extra context that could affect the recommended next step."
+    }
+  },
+  "required": ["eventType", "name", "location"]
+}
