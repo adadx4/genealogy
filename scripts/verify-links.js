@@ -35,6 +35,7 @@ const ANTI_SCRAPING_FALSE_POSITIVES = new Set([
   'au-cemeteries',           // 429 rate-limit on bursty checks
   'ca-ontario-archives',     // perfdrive.com bot-detection middleware
   'ca-banq',                 // perfdrive.com bot-detection middleware
+  'asia-philippine-archives',// 403 on scripted access
 ]);
 
 // Resources where intermittent fetch failures (DNS/network) have been observed

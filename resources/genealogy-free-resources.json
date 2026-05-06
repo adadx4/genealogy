@@ -1380,6 +1380,178 @@
           }
         ],
         "notes": "Filtered FamilySearch search — surfaces each decennial Canadian census collection."
+      },
+      {
+        "id": "fs-philippines",
+        "name": "Philippines records",
+        "url": "https://www.familysearch.org/search/record/results?q.birthLikePlace=Philippines",
+        "scope": {
+          "countries": [
+            "Philippines"
+          ]
+        },
+        "coverage": [
+          {
+            "events": [
+              "birth",
+              "baptism",
+              "marriage",
+              "death",
+              "burial",
+              "residence"
+            ],
+            "startYear": 1565,
+            "endYear": null
+          }
+        ],
+        "notes": "Surfaces Philippines Civil Registration, Catholic Church Records (Spanish colonial era onward), and 19th-century census fragments."
+      },
+      {
+        "id": "fs-thailand",
+        "name": "Thailand records",
+        "url": "https://www.familysearch.org/search/record/results?q.birthLikePlace=Thailand",
+        "scope": {
+          "countries": [
+            "Thailand"
+          ]
+        },
+        "coverage": [
+          {
+            "events": [
+              "birth",
+              "baptism",
+              "marriage",
+              "death",
+              "burial"
+            ],
+            "startYear": 1700,
+            "endYear": null
+          }
+        ],
+        "notes": "Limited indexed coverage — Thailand has thin free-online genealogy infrastructure. FamilySearch holds some Catholic mission and colonial-era records."
+      },
+      {
+        "id": "fs-mexico",
+        "name": "Mexico records",
+        "url": "https://www.familysearch.org/search/record/results?q.birthLikePlace=Mexico",
+        "scope": {
+          "countries": [
+            "Mexico"
+          ]
+        },
+        "coverage": [
+          {
+            "events": [
+              "birth",
+              "baptism",
+              "marriage",
+              "death",
+              "burial",
+              "residence"
+            ],
+            "startYear": 1500,
+            "endYear": null
+          }
+        ],
+        "notes": "Mexico Catholic Church Records (1500s onward) — one of the largest digitised Catholic parish collections anywhere. Plus Mexico Civil Registration from the late 1800s."
+      },
+      {
+        "id": "fs-brazil",
+        "name": "Brazil records",
+        "url": "https://www.familysearch.org/search/record/results?q.birthLikePlace=Brazil",
+        "scope": {
+          "countries": [
+            "Brazil"
+          ]
+        },
+        "coverage": [
+          {
+            "events": [
+              "birth",
+              "baptism",
+              "marriage",
+              "death",
+              "burial",
+              "residence"
+            ],
+            "startYear": 1600,
+            "endYear": null
+          }
+        ],
+        "notes": "Brazil Catholic Church Records, civil registration and slavery-era records."
+      },
+      {
+        "id": "fs-argentina",
+        "name": "Argentina records",
+        "url": "https://www.familysearch.org/search/record/results?q.birthLikePlace=Argentina",
+        "scope": {
+          "countries": [
+            "Argentina"
+          ]
+        },
+        "coverage": [
+          {
+            "events": [
+              "birth",
+              "baptism",
+              "marriage",
+              "death",
+              "burial",
+              "residence"
+            ],
+            "startYear": 1600,
+            "endYear": null
+          }
+        ],
+        "notes": "Argentina Catholic Church Records and provincial civil registration."
+      },
+      {
+        "id": "fs-south-africa",
+        "name": "South Africa records",
+        "url": "https://www.familysearch.org/search/record/results?q.birthLikePlace=South%20Africa",
+        "scope": {
+          "countries": [
+            "South Africa"
+          ]
+        },
+        "coverage": [
+          {
+            "events": [
+              "birth",
+              "baptism",
+              "marriage",
+              "death",
+              "burial",
+              "residence"
+            ],
+            "startYear": 1652,
+            "endYear": null
+          }
+        ],
+        "notes": "NGK (Dutch Reformed) church records, civil registration, and Cape Colony colonial documents."
+      },
+      {
+        "id": "fs-china",
+        "name": "China records",
+        "url": "https://www.familysearch.org/search/record/results?q.birthLikePlace=China",
+        "scope": {
+          "countries": [
+            "China"
+          ]
+        },
+        "coverage": [
+          {
+            "events": [
+              "birth",
+              "marriage",
+              "death",
+              "other"
+            ],
+            "startYear": 1300,
+            "endYear": null
+          }
+        ],
+        "notes": "Chinese Genealogies (jiapu) — clan and lineage books — plus some 19th- and 20th-century civil records. Coverage for surnames varies enormously."
       }
     ]
   },
@@ -4194,5 +4366,221 @@
     ],
     "bestFor": "Free index of seamen and ships visiting NSW ports",
     "notes": "Originally hosted by NSW State Records, now under MHNSW. Useful for ancestors who served on or arrived via shipping into Sydney and other NSW ports."
+  },
+  {
+    "id": "global-slave-voyages",
+    "resourceName": "Slave Voyages Database",
+    "url": "https://www.slavevoyages.org/voyage/database",
+    "homeUrl": "https://www.slavevoyages.org/",
+    "accessType": "free",
+    "scope": {
+      "countries": [
+        "United States",
+        "Brazil",
+        "Jamaica",
+        "Cuba",
+        "Haiti",
+        "Dominican Republic",
+        "Trinidad and Tobago",
+        "Barbados",
+        "Bahamas",
+        "Puerto Rico"
+      ],
+      "alsoCovers": [],
+      "stateProvince": null,
+      "county": null,
+      "parish": null,
+      "religion": "any"
+    },
+    "coverage": [
+      {
+        "events": [
+          "travel",
+          "other"
+        ],
+        "startYear": 1500,
+        "endYear": 1875
+      }
+    ],
+    "bestFor": "Free comprehensive index of trans-Atlantic and intra-American slave voyages",
+    "notes": "Hosts records for ~36,000 voyages, naming captains and ports of departure/arrival; the African Origins and Intra-American databases name 100,000+ enslaved individuals."
+  },
+  {
+    "id": "caribbean-jamaican-fs",
+    "resourceName": "Jamaican Family Search Genealogy Research Library",
+    "url": "https://www.jamaicanfamilysearch.com/",
+    "homeUrl": "https://www.jamaicanfamilysearch.com/",
+    "accessType": "free",
+    "scope": {
+      "countries": [
+        "Jamaica"
+      ],
+      "alsoCovers": [],
+      "stateProvince": null,
+      "county": null,
+      "parish": null,
+      "religion": "any"
+    },
+    "coverage": [
+      {
+        "events": [
+          "birth",
+          "baptism",
+          "marriage",
+          "death",
+          "burial",
+          "residence",
+          "other"
+        ],
+        "startYear": 1655,
+        "endYear": 1962
+      }
+    ],
+    "bestFor": "Free Jamaican parish registers, BMD indexes, wills and surname lists",
+    "notes": "Long-running volunteer site with the largest free Jamaica-specific genealogy collection online. Includes coverage of the planter/slave-owning class as well as later civil records."
+  },
+  {
+    "id": "asia-fibis",
+    "resourceName": "Families in British India Society (FIBIS)",
+    "url": "https://search.fibis.org/",
+    "homeUrl": "https://www.fibis.org/",
+    "accessType": "free-with-login",
+    "scope": {
+      "countries": [
+        "India",
+        "Pakistan",
+        "Bangladesh",
+        "Myanmar"
+      ],
+      "alsoCovers": [],
+      "stateProvince": null,
+      "county": null,
+      "parish": null,
+      "religion": "any"
+    },
+    "coverage": [
+      {
+        "events": [
+          "birth",
+          "baptism",
+          "marriage",
+          "death",
+          "burial",
+          "military",
+          "employment",
+          "travel",
+          "residence",
+          "other"
+        ],
+        "startYear": 1600,
+        "endYear": 1947
+      }
+    ],
+    "bestFor": "Free indexes for British and Anglo-Indian families during the Raj",
+    "notes": "FIBIwiki + FIBIS Database. Strong on Indian Army, East India Company, civil service, ecclesiastical records and cemetery transcriptions."
+  },
+  {
+    "id": "africa-eggsa",
+    "resourceName": "eGGSA — Genealogical Society of South Africa",
+    "url": "https://www.eggsa.org/",
+    "homeUrl": "https://www.eggsa.org/",
+    "accessType": "free",
+    "scope": {
+      "countries": [
+        "South Africa",
+        "Namibia",
+        "Zimbabwe",
+        "Botswana"
+      ],
+      "alsoCovers": [],
+      "stateProvince": null,
+      "county": null,
+      "parish": null,
+      "religion": "any"
+    },
+    "coverage": [
+      {
+        "events": [
+          "birth",
+          "baptism",
+          "marriage",
+          "death",
+          "burial",
+          "residence",
+          "legal",
+          "other"
+        ],
+        "startYear": 1652,
+        "endYear": 1990
+      }
+    ],
+    "bestFor": "Free Southern African genealogy — gravestone photos, NGK church records, BMDs, family pedigrees",
+    "notes": "The largest free SA-region database. Holds the eGGSA Branch image library, Source Cards, gravestone photos and the GISA collection."
+  },
+  {
+    "id": "asia-philippine-archives",
+    "resourceName": "National Archives of the Philippines",
+    "url": "http://nationalarchives.gov.ph/",
+    "homeUrl": "http://nationalarchives.gov.ph/",
+    "accessType": "free",
+    "scope": {
+      "countries": [
+        "Philippines"
+      ],
+      "alsoCovers": [],
+      "stateProvince": null,
+      "county": null,
+      "parish": null,
+      "religion": "any"
+    },
+    "coverage": [
+      {
+        "events": [
+          "legal",
+          "residence",
+          "birth",
+          "marriage",
+          "death",
+          "other"
+        ],
+        "startYear": 1565,
+        "endYear": null
+      }
+    ],
+    "bestFor": "Spanish colonial documents, civil registration and notarial records",
+    "notes": "Holds the Philippine Revolutionary Records, Spanish-era parish documents and civil registers. Many records require an in-person visit to Manila but the catalogue is online."
+  },
+  {
+    "id": "la-mexico-agn",
+    "resourceName": "Archivo General de la Nación (México)",
+    "url": "https://www.gob.mx/agn",
+    "homeUrl": "https://www.gob.mx/agn",
+    "accessType": "free",
+    "scope": {
+      "countries": [
+        "Mexico"
+      ],
+      "alsoCovers": [],
+      "stateProvince": null,
+      "county": null,
+      "parish": null,
+      "religion": "any"
+    },
+    "coverage": [
+      {
+        "events": [
+          "legal",
+          "travel",
+          "employment",
+          "military",
+          "residence",
+          "other"
+        ],
+        "startYear": 1521,
+        "endYear": null
+      }
+    ],
+    "bestFor": "Mexican federal records — colonial, Inquisition, land grants, civil and military",
+    "notes": "AGN holds the colonial-era Ramo de la Inquisición, Mercedes (land grants), and civil registration backups. Some collections digitised; many require a visit."
   }
 ]
