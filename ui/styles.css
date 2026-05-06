@@ -115,7 +115,7 @@ button.secondary {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .results-summary {
@@ -272,6 +272,145 @@ button.secondary {
 
 .results-general .result-card {
   background: #f1f5f9;
+}
+
+/* --- add-resource.html ---------------------------------------------------- */
+
+.optional {
+  color: #94a3b8;
+  font-weight: 400;
+  font-size: 0.85rem;
+}
+
+label small {
+  display: block;
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-top: 4px;
+  font-weight: 400;
+}
+
+label small.form-warning {
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.form-columns-tight {
+  display: flex;
+  gap: 16px;
+}
+
+.form-columns-tight label {
+  flex: 1;
+}
+
+@media (max-width: 640px) {
+  .form-columns-tight {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.hint {
+  color: #4a5568;
+  font-size: 0.9rem;
+  margin: 0 0 12px;
+}
+
+.coverage-row {
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+  background: #f8fafc;
+}
+
+.coverage-events {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin-bottom: 10px;
+}
+
+.event-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.event-checkbox input {
+  width: auto;
+  margin: 0;
+}
+
+.coverage-years {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.inline-label {
+  display: inline-flex;
+  flex-direction: column;
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.inline-label input {
+  width: 130px;
+  margin-top: 4px;
+}
+
+.remove-coverage {
+  background: #fee2e2;
+  color: #991b1b;
+  font-size: 0.85rem;
+  padding: 8px 12px;
+}
+
+#output {
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.output-actions {
+  margin-bottom: 12px;
+}
+
+#copy-output {
+  background: #10b981;
+  color: white;
+}
+
+#copy-output:disabled {
+  background: #6ee7b7;
+  cursor: default;
+}
+
+/* --- main page header link to add-resource ------------------------------- */
+
+.header-link {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.95rem;
+  color: #1f6feb;
+  text-decoration: none;
+}
+
+.header-link:hover {
+  text-decoration: underline;
 }
 
 .note-panel ul {

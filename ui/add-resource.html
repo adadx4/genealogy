@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Resource — Genealogy Search Guide</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header>
+      <h1>Add a Resource</h1>
+      <p>
+        Build a new catalogue entry. The form generates a JSON block — paste it into the
+        <code>newSpecific</code> array in <code>scripts/transform-data.js</code>, then run
+        <code>node scripts/transform-data.js</code> to add it to the catalogue.
+        <a href="index.html">Back to search</a>.
+      </p>
+      <p class="hint">
+        For adding a <strong>sub-collection under an existing resource</strong> (e.g. a new FamilySearch
+        collection), edit the <code>newSubCollections</code> array in the same script directly — that case
+        isn't supported by this form yet.
+      </p>
+    </header>
+
+    <form id="add-form" class="panel">
+      <fieldset>
+        <legend>1. Identity</legend>
+        <label>
+          Resource name *
+          <input id="resourceName" type="text" required placeholder="e.g. Norfolk Family History Society">
+        </label>
+        <label>
+          Slug ID *
+          <input id="id" type="text" required pattern="[a-z0-9\-]+" placeholder="auto-generated from name">
+          <small>Lowercase letters, numbers, dashes. Auto-fills from the name; edit if needed.</small>
+          <small id="id-warning" class="form-warning hidden"></small>
+        </label>
+        <label>
+          Search URL *
+          <input id="url" type="url" required placeholder="https://...">
+          <small>The URL the result card links to. Prefer a search page or specific collection page over a homepage.</small>
+        </label>
+        <label>
+          Homepage URL <span class="optional">(optional)</span>
+          <input id="homeUrl" type="url" placeholder="https://... — leave blank if same as Search URL">
+        </label>
+        <label>
+          Access type *
+          <select id="accessType" required>
+            <option value="free">Free</option>
+            <option value="free-with-login">Free with login</option>
+            <option value="freemium">Freemium (some free, some paid)</option>
+            <option value="paid">Paid</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>2. Geographic scope</legend>
+        <label>
+          Countries <span class="optional">(comma-separated)</span>
+          <input id="countries" type="text" placeholder="e.g. England, Wales — leave blank for truly-global resources">
+          <small>List every country the resource genuinely covers. Leave blank for global aggregators (FamilySearch, Ancestry, etc.) — they appear in the <em>broad / aggregator</em> section.</small>
+        </label>
+        <div class="form-columns-tight">
+          <label>
+            State / province <span class="optional">(optional)</span>
+            <input id="stateProvince" type="text" placeholder="e.g. Victoria">
+          </label>
+          <label>
+            State aliases <span class="optional">(comma-separated)</span>
+            <input id="stateAliases" type="text" placeholder="e.g. VIC, Victoria">
+          </label>
+        </div>
+        <div class="form-columns-tight">
+          <label>
+            County <span class="optional">(optional)</span>
+            <input id="county" type="text" placeholder="e.g. Lancashire">
+          </label>
+          <label>
+            Parish <span class="optional">(optional)</span>
+            <input id="parish" type="text" placeholder="e.g. St Albans">
+          </label>
+        </div>
+        <label>
+          Religion
+          <select id="religion">
+            <option value="any">Any / Unknown</option>
+            <option value="Catholic">Catholic</option>
+            <option value="Protestant">Protestant</option>
+            <option value="Jewish">Jewish</option>
+            <option value="LDS">LDS</option>
+            <option value="Orthodox">Orthodox</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>3. Coverage</legend>
+        <p class="hint">Each coverage period combines a set of event types with a year range. Add multiple periods if the resource covers different events with different year boundaries (e.g. births 1864-1923 and marriages 1845-1948).</p>
+        <div id="coverage-rows"></div>
+        <button type="button" id="add-coverage" class="secondary">+ Add another coverage period</button>
+      </fieldset>
+
+      <fieldset>
+        <legend>4. Description</legend>
+        <label>
+          Best for *
+          <textarea id="bestFor" rows="2" required placeholder="One-sentence summary of what this resource is best at."></textarea>
+        </label>
+        <label>
+          Notes <span class="optional">(optional)</span>
+          <textarea id="notes" rows="3" placeholder="Caveats, coverage gaps, login or payment quirks."></textarea>
+        </label>
+      </fieldset>
+
+      <div class="actions">
+        <button type="submit">Generate entry</button>
+        <button type="reset" class="secondary">Reset form</button>
+      </div>
+    </form>
+
+    <section id="output-section" class="panel hidden">
+      <h2>Generated entry</h2>
+      <p>
+        Paste this object into the <code>newSpecific</code> array near the bottom of
+        <code>scripts/transform-data.js</code> (between the existing entries' commas), then run
+        <code>node scripts/transform-data.js</code>.
+      </p>
+      <div class="output-actions">
+        <button type="button" id="copy-output">Copy to clipboard</button>
+      </div>
+      <pre id="output"></pre>
+    </section>
+  </main>
+
+  <script src="../resources/genealogy-free-resources.js"></script>
+  <script src="add-resource.js"></script>
+</body>
+</html>
