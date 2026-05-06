@@ -235,6 +235,45 @@ button.secondary {
   color: #4a5568;
 }
 
+.results-general {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px dashed #cbd5e1;
+}
+
+.results-general[open] {
+  padding-top: 8px;
+}
+
+.results-general summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #4a5568;
+  padding: 8px 0;
+  list-style: revert;
+  user-select: none;
+}
+
+.results-general summary:hover {
+  color: #1f6feb;
+}
+
+.results-general[open] summary::after {
+  content: ' (click to collapse)';
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.results-general .results-list {
+  margin-top: 12px;
+  opacity: 0.92;
+}
+
+.results-general .result-card {
+  background: #f1f5f9;
+}
+
 .note-panel ul {
   padding-left: 18px;
 }

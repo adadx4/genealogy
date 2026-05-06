@@ -29,6 +29,12 @@ const ANTI_SCRAPING_FALSE_POSITIVES = new Set([
   'paid-thegenealogist',     // 403 redirect on scripted access
   'uk-bna',                  // 403 — hard anti-scraping
   'au-ryerson',              // 429 rate-limit on bursty checks
+  'us-dar',                  // 403 on scripted access
+  'ca-nb-archives',          // 403 on scripted access
+  'us-chronicling-america',  // LoC blocks scripted access
+  'au-cemeteries',           // 429 rate-limit on bursty checks
+  'ca-ontario-archives',     // perfdrive.com bot-detection middleware
+  'ca-banq',                 // perfdrive.com bot-detection middleware
 ]);
 
 // Resources where intermittent fetch failures (DNS/network) have been observed
@@ -40,6 +46,13 @@ const KNOWN_FLAKY = new Set([
   'uk-durhambmd',
   'uk-berkshirebmd',
   'uk-northwalesbmd',
+  'us-castle-garden',
+  'us-ma-archives',
+  'us-tx-archives',
+  'ca-bc-archives',
+  'paid-prdh-igd',
+  'paid-myheritage',          // intermittent fetch failures
+  'au-mariners-ships',        // mariners.records.nsw.gov.au — slow, intermittent fetch failures
 ]);
 
 function flatten(resources) {

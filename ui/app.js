@@ -261,11 +261,27 @@ function explanationFor(query, matches) {
   return reasons.join(' ');
 }
 
+// A match is "general" (broad/aggregator) when its scope has no specific country
+// — typically truly-global directories (Cyndi's List parent, FamilySearch, etc.)
+// or worldwide indexes (Find a Grave, Internet Archive). Country-bounded
+// resources (even multi-country ones like Findmypast or Convict Records of
+// Australia) stay in the specific bucket because they ARE specific record sets,
+// just regional. Adjust this if you want a more aggressive split.
+function isGeneralResult({ entry }) {
+  const scope = entry.scope || {};
+  const countries = scope.countries || [];
+  return countries.length === 0;
+}
+
 function renderResults(query, matches) {
   resultsSection.classList.remove('hidden');
   const isFreeish = (a) => a === 'free' || a === 'free-with-login' || a === 'freemium';
   const freeCount = matches.filter((m) => isFreeish(m.entry.accessType)).length;
   const paidCount = matches.filter((m) => m.entry.accessType === 'paid').length;
+
+  const specific = matches.filter((m) => !isGeneralResult(m));
+  const general = matches.filter((m) => isGeneralResult(m));
+
   if (matches.length === 0) {
     resultsSummaryEl.textContent = 'No matching resources found.';
   } else {
@@ -273,10 +289,35 @@ function renderResults(query, matches) {
     if (freeCount) parts.push(`${freeCount} free / freemium`);
     if (paidCount) parts.push(`${paidCount} paid`);
     const noun = matches.length === 1 ? 'result' : 'results';
-    resultsSummaryEl.textContent = `${matches.length} ${noun} (${parts.join(', ')}).`;
+    const split = general.length > 0
+      ? ` — ${specific.length} targeted, ${general.length} broad`
+      : '';
+    resultsSummaryEl.textContent = `${matches.length} ${noun} (${parts.join(', ')})${split}.`;
   }
   resultsExplanationEl.textContent = explanationFor(query, matches);
-  resultsListEl.innerHTML = matches.map((m) => renderResultCard(m, query.eventType)).join('');
+  resultsListEl.innerHTML = specific.map((m) => renderResultCard(m, query.eventType)).join('');
+
+  // Render (or hide) the broad/aggregator section after the main list.
+  let generalSection = document.getElementById('results-general');
+  if (!generalSection) {
+    generalSection = document.createElement('details');
+    generalSection.id = 'results-general';
+    generalSection.className = 'results-general';
+    resultsListEl.parentElement.appendChild(generalSection);
+  }
+  if (general.length === 0) {
+    generalSection.style.display = 'none';
+    generalSection.innerHTML = '';
+  } else {
+    generalSection.style.display = '';
+    // Auto-expand if there are no specific matches (otherwise the user sees an
+    // empty list and a closed toggle, which is confusing).
+    if (specific.length === 0) generalSection.setAttribute('open', '');
+    else generalSection.removeAttribute('open');
+    const noun = general.length === 1 ? 'broad / aggregator resource' : 'broad / aggregator resources';
+    generalSection.innerHTML = `<summary>Show ${general.length} ${noun}</summary>
+      <ul class="results-list">${general.map((m) => renderResultCard(m, query.eventType)).join('')}</ul>`;
+  }
 }
 
 function renderResultCard({ entry, coverage }, queryEvent) {

@@ -1,21 +1,10 @@
 {
-  "checkedAt": "2026-05-06T07:41:36.093Z",
+  "checkedAt": "2026-05-06T09:35:45.871Z",
   "results": [
     {
       "id": "uk-freebmd",
       "label": "FreeBMD",
       "kind": "url",
-      "url": "https://www.freebmd.org.uk/search.shtml",
-      "status": 404,
-      "ok": false,
-      "finalUrl": "https://www.freebmd.org.uk/search.shtml",
-      "redirected": false,
-      "crossDomain": false
-    },
-    {
-      "id": "uk-freebmd",
-      "label": "FreeBMD",
-      "kind": "homeUrl",
       "url": "https://www.freebmd.org.uk/",
       "status": 200,
       "ok": true,
@@ -130,14 +119,18 @@
       "label": "GENUKI",
       "kind": "url",
       "url": "https://www.genuki.org.uk/",
-      "error": "fetch failed"
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.genuki.org.uk/",
+      "redirected": false,
+      "crossDomain": false
     },
     {
       "id": "uk-tna-discovery",
       "label": "The National Archives — Discovery",
       "kind": "url",
       "url": "https://discovery.nationalarchives.gov.uk/",
-      "status": 200,
+      "status": 202,
       "ok": true,
       "finalUrl": "https://discovery.nationalarchives.gov.uk/",
       "redirected": false,
@@ -191,17 +184,6 @@
       "id": "uk-nrscotland",
       "label": "National Records of Scotland",
       "kind": "url",
-      "url": "https://www.nrscotland.gov.uk/research/family-history",
-      "status": 404,
-      "ok": false,
-      "finalUrl": "https://www.nrscotland.gov.uk/research/family-history",
-      "redirected": false,
-      "crossDomain": false
-    },
-    {
-      "id": "uk-nrscotland",
-      "label": "National Records of Scotland",
-      "kind": "homeUrl",
       "url": "https://www.nrscotland.gov.uk/",
       "status": 200,
       "ok": true,
@@ -213,23 +195,12 @@
       "id": "uk-proni",
       "label": "PRONI Search Archives Online",
       "kind": "url",
-      "url": "https://www.nidirect.gov.uk/information-and-services/proni-historical-records/search-archives-online",
-      "status": 404,
-      "ok": false,
-      "finalUrl": "https://www.nidirect.gov.uk/information-and-services/proni-historical-records/search-archives-online",
-      "redirected": false,
-      "crossDomain": false
-    },
-    {
-      "id": "uk-proni",
-      "label": "PRONI Search Archives Online",
-      "kind": "homeUrl",
-      "url": "https://www.nidirect.gov.uk/proni",
+      "url": "https://www.proni.gov.uk/",
       "status": 200,
       "ok": true,
       "finalUrl": "https://www.proni.gov.uk/",
-      "redirected": true,
-      "crossDomain": true
+      "redirected": false,
+      "crossDomain": false
     },
     {
       "id": "uk-groni",
@@ -239,17 +210,6 @@
       "status": 200,
       "ok": true,
       "finalUrl": "https://geni.nidirect.gov.uk/",
-      "redirected": false,
-      "crossDomain": false
-    },
-    {
-      "id": "uk-groni",
-      "label": "GRONI (NI civil registration)",
-      "kind": "homeUrl",
-      "url": "https://www.nidirect.gov.uk/articles/finding-records-births-deaths-marriages-civil-partnerships-and-adoptions",
-      "status": 404,
-      "ok": false,
-      "finalUrl": "https://www.nidirect.gov.uk/articles/finding-records-births-deaths-marriages-civil-partnerships-and-adoptions",
       "redirected": false,
       "crossDomain": false
     },
@@ -342,17 +302,6 @@
       "crossDomain": false
     },
     {
-      "id": "au-nsw-bdm",
-      "label": "NSW BDM Historical Indexes",
-      "kind": "homeUrl",
-      "url": "https://www.nsw.gov.au/family-and-relationships/births-deaths-marriages",
-      "status": 404,
-      "ok": false,
-      "finalUrl": "https://www.nsw.gov.au/family-and-relationships/births-deaths-marriages",
-      "redirected": false,
-      "crossDomain": false
-    },
-    {
       "id": "au-vic-bdm",
       "label": "Victoria BDM Historical Indexes",
       "kind": "url",
@@ -408,17 +357,6 @@
       "crossDomain": false
     },
     {
-      "id": "au-wa-bdm",
-      "label": "Western Australia BDM Online Index",
-      "kind": "homeUrl",
-      "url": "https://www.wa.gov.au/government/publications/online-index-search-births-deaths-and-marriages",
-      "status": 404,
-      "ok": false,
-      "finalUrl": "https://www.wa.gov.au/government/publications/online-index-search-births-deaths-and-marriages",
-      "redirected": false,
-      "crossDomain": false
-    },
-    {
       "id": "au-sa-familyhistory",
       "label": "South Australia Family History Search (Genealogy SA)",
       "kind": "url",
@@ -466,17 +404,6 @@
       "id": "au-nt-bdm",
       "label": "Northern Territory BDM Family History Search",
       "kind": "url",
-      "url": "https://nt.gov.au/law/bdm/family-history-search",
-      "status": 404,
-      "ok": false,
-      "finalUrl": "https://nt.gov.au/law/bdm/family-history-search",
-      "redirected": false,
-      "crossDomain": false
-    },
-    {
-      "id": "au-nt-bdm",
-      "label": "Northern Territory BDM Family History Search",
-      "kind": "homeUrl",
       "url": "https://nt.gov.au/law/bdm",
       "status": 200,
       "ok": true,
@@ -488,17 +415,6 @@
       "id": "au-nsw-archives",
       "label": "NSW State Archives Indexes",
       "kind": "url",
-      "url": "https://mhnsw.au/indexes/",
-      "status": 404,
-      "ok": false,
-      "finalUrl": "https://mhnsw.au/indexes/",
-      "redirected": false,
-      "crossDomain": false
-    },
-    {
-      "id": "au-nsw-archives",
-      "label": "NSW State Archives Indexes",
-      "kind": "homeUrl",
       "url": "https://mhnsw.au/",
       "status": 200,
       "ok": true,
@@ -697,23 +613,23 @@
       "id": "ca-lac",
       "label": "Library and Archives Canada",
       "kind": "url",
-      "url": "https://library-archives.canada.ca/eng/collection/research-help/genealogy-family-history/Pages/genealogy-family-history.aspx",
+      "url": "https://www.canada.ca/en/library-archives/collection/research-help/genealogy-family-history.html",
       "status": 200,
       "ok": true,
       "finalUrl": "https://www.canada.ca/en/library-archives/collection/research-help/genealogy-family-history.html",
-      "redirected": true,
-      "crossDomain": true
+      "redirected": false,
+      "crossDomain": false
     },
     {
       "id": "ca-lac",
       "label": "Library and Archives Canada",
       "kind": "homeUrl",
-      "url": "https://library-archives.canada.ca/",
+      "url": "https://www.canada.ca/en/library-archives.html",
       "status": 200,
       "ok": true,
       "finalUrl": "https://www.canada.ca/en/library-archives.html",
-      "redirected": true,
-      "crossDomain": true
+      "redirected": false,
+      "crossDomain": false
     },
     {
       "id": "nz-archives",
@@ -752,12 +668,12 @@
       "id": "nz-bdm-historical",
       "label": "NZ BDM Historical Records",
       "kind": "homeUrl",
-      "url": "https://www.dia.govt.nz/Births-Deaths-and-Marriages",
+      "url": "https://www.govt.nz/organisations/births-deaths-and-marriages/",
       "status": 200,
       "ok": true,
       "finalUrl": "https://www.govt.nz/organisations/births-deaths-and-marriages/",
-      "redirected": true,
-      "crossDomain": true
+      "redirected": false,
+      "crossDomain": false
     },
     {
       "id": "de-matricula",
@@ -884,21 +800,10 @@
       "id": "fmp-1939-register",
       "label": "Findmypast — 1939 Register of England and Wales",
       "kind": "collection",
-      "url": "https://search.findmypast.co.uk/search-world-records/1939-register-2",
-      "status": 500,
-      "ok": false,
-      "finalUrl": "https://search.findmypast.co.uk/search-world-records/1939-register-2",
-      "redirected": false,
-      "crossDomain": false
-    },
-    {
-      "id": "fmp-parish-records",
-      "label": "Findmypast — Findmypast UK Parish Records",
-      "kind": "collection",
-      "url": "https://search.findmypast.co.uk/search-world-records/parish-records",
-      "status": 500,
-      "ok": false,
-      "finalUrl": "https://search.findmypast.co.uk/search-world-records/parish-records",
+      "url": "https://www.findmypast.co.uk/1939-register",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.findmypast.co.uk/1939-register",
       "redirected": false,
       "crossDomain": false
     },
@@ -906,23 +811,19 @@
       "id": "fmp-irish-records",
       "label": "Findmypast — Ireland Collection",
       "kind": "collection",
-      "url": "https://search.findmypast.co.uk/search-world-records?region=Ireland",
+      "url": "https://www.findmypast.co.uk/discover?region=Ireland",
       "status": 200,
       "ok": true,
       "finalUrl": "https://www.findmypast.co.uk/discover?region=Ireland",
-      "redirected": true,
-      "crossDomain": true
+      "redirected": false,
+      "crossDomain": false
     },
     {
       "id": "paid-myheritage",
       "label": "MyHeritage",
       "kind": "url",
       "url": "https://www.myheritage.com/research",
-      "status": 200,
-      "ok": true,
-      "finalUrl": "https://www.myheritage.com/research",
-      "redirected": false,
-      "crossDomain": false
+      "error": "fetch failed"
     },
     {
       "id": "paid-myheritage",
@@ -1016,17 +917,6 @@
       "id": "global-wikitree",
       "label": "WikiTree",
       "kind": "url",
-      "url": "https://www.wikitree.com/wiki/Special:Search",
-      "status": 200,
-      "ok": true,
-      "finalUrl": "https://www.wikitree.com/",
-      "redirected": true,
-      "crossDomain": false
-    },
-    {
-      "id": "global-wikitree",
-      "label": "WikiTree",
-      "kind": "homeUrl",
       "url": "https://www.wikitree.com/",
       "status": 200,
       "ok": true,
@@ -1038,17 +928,6 @@
       "id": "uk-deceased-online",
       "label": "Deceased Online",
       "kind": "url",
-      "url": "https://www.deceasedonline.com/servlet/GSDOSearch",
-      "status": 200,
-      "ok": true,
-      "finalUrl": "https://www.deceasedonline.com/",
-      "redirected": true,
-      "crossDomain": false
-    },
-    {
-      "id": "uk-deceased-online",
-      "label": "Deceased Online",
-      "kind": "homeUrl",
       "url": "https://www.deceasedonline.com/",
       "status": 200,
       "ok": true,
@@ -1076,50 +955,6 @@
       "ok": true,
       "finalUrl": "https://www.cyndislist.com/uk/eng/",
       "redirected": false,
-      "crossDomain": false
-    },
-    {
-      "id": "cl-scotland",
-      "label": "Cyndi's List — Scotland directory",
-      "kind": "collection",
-      "url": "https://www.cyndislist.com/scotland/",
-      "status": 200,
-      "ok": true,
-      "finalUrl": "https://www.cyndislist.com/404/",
-      "redirected": true,
-      "crossDomain": false
-    },
-    {
-      "id": "cl-wales",
-      "label": "Cyndi's List — Wales directory",
-      "kind": "collection",
-      "url": "https://www.cyndislist.com/wales/",
-      "status": 200,
-      "ok": true,
-      "finalUrl": "https://www.cyndislist.com/404/",
-      "redirected": true,
-      "crossDomain": false
-    },
-    {
-      "id": "cl-ireland",
-      "label": "Cyndi's List — Ireland directory",
-      "kind": "collection",
-      "url": "https://www.cyndislist.com/ireland/",
-      "status": 200,
-      "ok": true,
-      "finalUrl": "https://www.cyndislist.com/404/",
-      "redirected": true,
-      "crossDomain": false
-    },
-    {
-      "id": "cl-australia",
-      "label": "Cyndi's List — Australia directory",
-      "kind": "collection",
-      "url": "https://www.cyndislist.com/au/",
-      "status": 200,
-      "ok": true,
-      "finalUrl": "https://www.cyndislist.com/404/",
-      "redirected": true,
       "crossDomain": false
     },
     {
@@ -1153,17 +988,6 @@
       "ok": true,
       "finalUrl": "https://www.cyndislist.com/germany/",
       "redirected": false,
-      "crossDomain": false
-    },
-    {
-      "id": "cl-military",
-      "label": "Cyndi's List — Military category",
-      "kind": "collection",
-      "url": "https://www.cyndislist.com/military/",
-      "status": 200,
-      "ok": true,
-      "finalUrl": "https://www.cyndislist.com/404/",
-      "redirected": true,
       "crossDomain": false
     },
     {
@@ -1203,17 +1027,6 @@
       "id": "au-awm",
       "label": "Australian War Memorial",
       "kind": "url",
-      "url": "https://www.awm.gov.au/collection/people",
-      "status": 404,
-      "ok": false,
-      "finalUrl": "https://www.awm.gov.au/collection/people",
-      "redirected": false,
-      "crossDomain": false
-    },
-    {
-      "id": "au-awm",
-      "label": "Australian War Memorial",
-      "kind": "homeUrl",
       "url": "https://www.awm.gov.au/",
       "status": 200,
       "ok": true,
@@ -1273,7 +1086,11 @@
       "label": "BerkshireBMD",
       "kind": "url",
       "url": "https://www.berkshirebmd.org.uk/",
-      "error": "fetch failed"
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.berkshirebmd.org.uk/",
+      "redirected": false,
+      "crossDomain": false
     },
     {
       "id": "uk-wiltshirebmd",
@@ -1297,17 +1114,6 @@
       "id": "au-naa",
       "label": "National Archives of Australia",
       "kind": "url",
-      "url": "https://recordsearch.naa.gov.au/SearchNRetrieve/Interface/SearchScreens/BasicSearch.aspx",
-      "status": 200,
-      "ok": true,
-      "finalUrl": "https://recordsearch.naa.gov.au/SearchNRetrieve/Interface/SessionTimeout.aspx",
-      "redirected": true,
-      "crossDomain": false
-    },
-    {
-      "id": "au-naa",
-      "label": "National Archives of Australia",
-      "kind": "homeUrl",
       "url": "https://www.naa.gov.au/",
       "status": 200,
       "ok": true,
@@ -1341,23 +1147,12 @@
       "id": "au-qsa",
       "label": "Queensland State Archives (QSA)",
       "kind": "url",
-      "url": "https://www.archives.qld.gov.au/explore-collection/genealogy",
+      "url": "https://www.qld.gov.au/recreation/arts/heritage/archives",
       "status": 200,
       "ok": true,
       "finalUrl": "https://www.qld.gov.au/recreation/arts/heritage/archives",
-      "redirected": true,
-      "crossDomain": true
-    },
-    {
-      "id": "au-qsa",
-      "label": "Queensland State Archives (QSA)",
-      "kind": "homeUrl",
-      "url": "https://www.archives.qld.gov.au/",
-      "status": 200,
-      "ok": true,
-      "finalUrl": "https://www.qld.gov.au/recreation/arts/heritage/archives",
-      "redirected": true,
-      "crossDomain": true
+      "redirected": false,
+      "crossDomain": false
     },
     {
       "id": "au-srowa",
@@ -1371,31 +1166,9 @@
       "crossDomain": false
     },
     {
-      "id": "au-srowa",
-      "label": "State Records Office of Western Australia",
-      "kind": "homeUrl",
-      "url": "https://www.wa.gov.au/organisation/state-records-office",
-      "status": 404,
-      "ok": false,
-      "finalUrl": "https://www.wa.gov.au/organisation/state-records-office",
-      "redirected": false,
-      "crossDomain": false
-    },
-    {
       "id": "au-srsa",
       "label": "State Records of South Australia",
       "kind": "url",
-      "url": "https://archives.sa.gov.au/finding-information/family-history",
-      "status": 404,
-      "ok": false,
-      "finalUrl": "https://archives.sa.gov.au/finding-information/family-history",
-      "redirected": false,
-      "crossDomain": false
-    },
-    {
-      "id": "au-srsa",
-      "label": "State Records of South Australia",
-      "kind": "homeUrl",
       "url": "https://archives.sa.gov.au/",
       "status": 200,
       "ok": true,
@@ -1429,17 +1202,6 @@
       "id": "uk-nlw",
       "label": "National Library of Wales — Family History",
       "kind": "url",
-      "url": "https://www.library.wales/discover-learn/digital-exhibitions/family-history",
-      "status": 404,
-      "ok": false,
-      "finalUrl": "https://www.library.wales/discover-learn/digital-exhibitions/family-history",
-      "redirected": false,
-      "crossDomain": false
-    },
-    {
-      "id": "uk-nlw",
-      "label": "National Library of Wales — Family History",
-      "kind": "homeUrl",
       "url": "https://www.library.wales/",
       "status": 200,
       "ok": true,
@@ -1462,39 +1224,17 @@
       "id": "uk-sog",
       "label": "Society of Genealogists (London)",
       "kind": "url",
-      "url": "https://www.sog.org.uk/search-records/",
-      "status": 404,
-      "ok": false,
-      "finalUrl": "https://sog.org.uk/search-records/",
-      "redirected": true,
-      "crossDomain": false
-    },
-    {
-      "id": "uk-sog",
-      "label": "Society of Genealogists (London)",
-      "kind": "homeUrl",
-      "url": "https://www.sog.org.uk/",
+      "url": "https://sog.org.uk/",
       "status": 200,
       "ok": true,
       "finalUrl": "https://sog.org.uk/",
-      "redirected": true,
-      "crossDomain": false
-    },
-    {
-      "id": "global-cwgc",
-      "label": "Commonwealth War Graves Commission",
-      "kind": "url",
-      "url": "https://www.cwgc.org/find-records/find-war-dead/",
-      "status": 500,
-      "ok": false,
-      "finalUrl": "https://www.cwgc.org/find-records/find-war-dead/",
       "redirected": false,
       "crossDomain": false
     },
     {
       "id": "global-cwgc",
       "label": "Commonwealth War Graves Commission",
-      "kind": "homeUrl",
+      "kind": "url",
       "url": "https://www.cwgc.org/",
       "status": 200,
       "ok": true,
@@ -1528,23 +1268,23 @@
       "id": "paid-forces-war-records",
       "label": "Forces War Records",
       "kind": "url",
-      "url": "https://www.forces-war-records.co.uk/search/",
+      "url": "https://uk.forceswarrecords.com/search",
       "status": 200,
       "ok": true,
       "finalUrl": "https://uk.forceswarrecords.com/search",
-      "redirected": true,
-      "crossDomain": true
+      "redirected": false,
+      "crossDomain": false
     },
     {
       "id": "paid-forces-war-records",
       "label": "Forces War Records",
       "kind": "homeUrl",
-      "url": "https://www.forces-war-records.co.uk/",
+      "url": "https://uk.forceswarrecords.com/",
       "status": 200,
       "ok": true,
       "finalUrl": "https://uk.forceswarrecords.com/",
-      "redirected": true,
-      "crossDomain": true
+      "redirected": false,
+      "crossDomain": false
     },
     {
       "id": "us-uscis-genealogy",
@@ -1572,17 +1312,6 @@
       "id": "global-geneanet",
       "label": "Geneanet",
       "kind": "url",
-      "url": "https://en.geneanet.org/search/",
-      "status": 404,
-      "ok": false,
-      "finalUrl": "https://en.geneanet.org/search/",
-      "redirected": false,
-      "crossDomain": false
-    },
-    {
-      "id": "global-geneanet",
-      "label": "Geneanet",
-      "kind": "homeUrl",
       "url": "https://en.geneanet.org/",
       "status": 200,
       "ok": true,
@@ -1594,17 +1323,6 @@
       "id": "paid-rootsireland",
       "label": "RootsIreland",
       "kind": "url",
-      "url": "https://www.rootsireland.ie/search/",
-      "status": 200,
-      "ok": true,
-      "finalUrl": "https://www.rootsireland.ie/2016/05/searching-roscommon-newspapers/",
-      "redirected": true,
-      "crossDomain": false
-    },
-    {
-      "id": "paid-rootsireland",
-      "label": "RootsIreland",
-      "kind": "homeUrl",
       "url": "https://www.rootsireland.ie/",
       "status": 200,
       "ok": true,
@@ -1694,10 +1412,10 @@
       "label": "GenealogyBank",
       "kind": "url",
       "url": "https://www.genealogybank.com/search/",
-      "status": 200,
+      "status": 202,
       "ok": true,
-      "finalUrl": "https://www.genealogybank.com/sign-in?url=/search",
-      "redirected": true,
+      "finalUrl": "https://www.genealogybank.com/search/",
+      "redirected": false,
       "crossDomain": false
     },
     {
@@ -1705,9 +1423,384 @@
       "label": "GenealogyBank",
       "kind": "homeUrl",
       "url": "https://www.genealogybank.com/",
-      "status": 200,
+      "status": 202,
       "ok": true,
       "finalUrl": "https://www.genealogybank.com/",
+      "redirected": false,
+      "crossDomain": false
+    },
+    {
+      "id": "us-nara",
+      "label": "National Archives (NARA) — Genealogy",
+      "kind": "url",
+      "url": "https://www.archives.gov/research/genealogy",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.archives.gov/research/genealogy",
+      "redirected": false,
+      "crossDomain": false
+    },
+    {
+      "id": "us-nara",
+      "label": "National Archives (NARA) — Genealogy",
+      "kind": "homeUrl",
+      "url": "https://www.archives.gov/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.archives.gov/",
+      "redirected": false,
+      "crossDomain": false
+    },
+    {
+      "id": "us-chronicling-america",
+      "label": "Chronicling America",
+      "kind": "url",
+      "url": "https://www.loc.gov/collections/chronicling-america/",
+      "status": 403,
+      "ok": false,
+      "finalUrl": "https://www.loc.gov/collections/chronicling-america/",
+      "redirected": false,
+      "crossDomain": false
+    },
+    {
+      "id": "us-dar",
+      "label": "DAR Genealogical Research Database",
+      "kind": "url",
+      "url": "https://services.dar.org/Public/DAR_Research/search_adb/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://services.dar.org/Public/DAR_Research/search/",
+      "redirected": true,
+      "crossDomain": false
+    },
+    {
+      "id": "us-dar",
+      "label": "DAR Genealogical Research Database",
+      "kind": "homeUrl",
+      "url": "https://www.dar.org/library/genealogical-research",
+      "status": 403,
+      "ok": false,
+      "finalUrl": "https://www.dar.org/library/genealogical-research",
+      "redirected": false,
+      "crossDomain": false
+    },
+    {
+      "id": "us-castle-garden",
+      "label": "Castle Garden",
+      "kind": "url",
+      "url": "https://www.castlegarden.org/searcher.php",
+      "error": "fetch failed"
+    },
+    {
+      "id": "us-castle-garden",
+      "label": "Castle Garden",
+      "kind": "homeUrl",
+      "url": "https://www.castlegarden.org/",
+      "error": "fetch failed"
+    },
+    {
+      "id": "us-civil-war-soldiers",
+      "label": "Civil War Soldiers and Sailors System (NPS)",
+      "kind": "url",
+      "url": "https://www.nps.gov/civilwar/soldiers-and-sailors-database.htm",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.nps.gov/civilwar/soldiers-and-sailors-database.htm",
+      "redirected": false,
+      "crossDomain": false
+    },
+    {
+      "id": "us-civil-war-soldiers",
+      "label": "Civil War Soldiers and Sailors System (NPS)",
+      "kind": "homeUrl",
+      "url": "https://www.nps.gov/civilwar/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.nps.gov/civilwar/index.htm",
+      "redirected": true,
+      "crossDomain": false
+    },
+    {
+      "id": "us-stevemorse",
+      "label": "Stephen P. Morse — One-Step Webpages",
+      "kind": "url",
+      "url": "https://www.stevemorse.org/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.stevemorse.org/",
+      "redirected": false,
+      "crossDomain": false
+    },
+    {
+      "id": "us-afrigeneas",
+      "label": "AfriGeneas",
+      "kind": "url",
+      "url": "http://www.afrigeneas.com/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.afrigeneas.com/",
+      "redirected": true,
+      "crossDomain": false
+    },
+    {
+      "id": "us-ny-archives",
+      "label": "New York State Archives",
+      "kind": "url",
+      "url": "http://www.archives.nysed.gov/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.archives.nysed.gov/",
+      "redirected": true,
+      "crossDomain": false
+    },
+    {
+      "id": "us-ca-archives",
+      "label": "California State Archives",
+      "kind": "url",
+      "url": "https://www.sos.ca.gov/archives/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.sos.ca.gov/archives/",
+      "redirected": false,
+      "crossDomain": false
+    },
+    {
+      "id": "us-ma-archives",
+      "label": "Massachusetts Archives",
+      "kind": "url",
+      "url": "https://www.sec.state.ma.us/divisions/archives/research/genealogy.htm",
+      "error": "fetch failed"
+    },
+    {
+      "id": "us-ma-archives",
+      "label": "Massachusetts Archives",
+      "kind": "homeUrl",
+      "url": "https://www.sec.state.ma.us/divisions/archives/",
+      "error": "fetch failed"
+    },
+    {
+      "id": "us-pa-archives",
+      "label": "Pennsylvania State Archives",
+      "kind": "url",
+      "url": "https://www.pa.gov/agencies/phmc",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.pa.gov/agencies/phmc",
+      "redirected": false,
+      "crossDomain": false
+    },
+    {
+      "id": "us-tx-archives",
+      "label": "Texas State Library and Archives",
+      "kind": "url",
+      "url": "https://www.tsl.texas.gov/arc/genealogy.html",
+      "error": "fetch failed"
+    },
+    {
+      "id": "us-tx-archives",
+      "label": "Texas State Library and Archives",
+      "kind": "homeUrl",
+      "url": "https://www.tsl.texas.gov/",
+      "error": "fetch failed"
+    },
+    {
+      "id": "us-va-library",
+      "label": "Library of Virginia",
+      "kind": "url",
+      "url": "https://www.lva.virginia.gov/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.lva.virginia.gov/",
+      "redirected": false,
+      "crossDomain": false
+    },
+    {
+      "id": "ca-canadian-headstones",
+      "label": "Canadian Headstones",
+      "kind": "url",
+      "url": "https://canadianheadstones.ca/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://canadianheadstones.ca/cgi-sys/suspendedpage.cgi",
+      "redirected": true,
+      "crossDomain": false
+    },
+    {
+      "id": "ca-automated-genealogy",
+      "label": "Automated Genealogy",
+      "kind": "url",
+      "url": "http://automatedgenealogy.com/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "http://automatedgenealogy.com/",
+      "redirected": false,
+      "crossDomain": false
+    },
+    {
+      "id": "ca-cvwm",
+      "label": "Canadian Virtual War Memorial",
+      "kind": "url",
+      "url": "https://www.veterans.gc.ca/eng/remembrance/memorials/canadian-virtual-war-memorial",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.veterans.gc.ca/en/remembrance/memorials/canadian-virtual-war-memorial",
+      "redirected": true,
+      "crossDomain": false
+    },
+    {
+      "id": "ca-cvwm",
+      "label": "Canadian Virtual War Memorial",
+      "kind": "homeUrl",
+      "url": "https://www.veterans.gc.ca/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.veterans.gc.ca/language_selection_page?destination=/node/117",
+      "redirected": true,
+      "crossDomain": false
+    },
+    {
+      "id": "ca-ontario-archives",
+      "label": "Archives of Ontario",
+      "kind": "url",
+      "url": "https://www.archives.gov.on.ca/en/family_history/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://validate.perfdrive.com/?ssa=19c3fdf2-5a92-4a6f-b2c1-e5e8e6c84b11&ssb=04268281176&ssc=https%3A%2F%2Fwww.archives.gov.on.ca%2Fen%2Ffamily_history%2F&ssi=c1302cfc-dajy-473e-9d05-2fe392635349&ssk=botmanager_support@radware.com&ssm=56356214096042865103733658324587&ssn=ea2850a165ec9ec226090553f62166afe74191282232-c510-44ed-ae318a&sso=3830f3e3-1e492a040f61d6fd3ea0881b9591e6c664dc5f524b74e395&ssp=10795811591778035510177805839445793&ssq=46536806011172084785260111342198996130334&ssr=MTEyLjIxMy4xODguODM=&sst=Mozilla/5.0%20(compatible;%20GenealogyCatalogVerifier/1.0)&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDA5MTI4MjIzMi1jNTEwLTQ0ZWQtYTNlMy0xZTQ5MmEwNDBmNjExLTE3NzgwNjAxMTE0OTEwLTAwMzdlZGQ3ZTg5MDc2OGM4YjMxMCJ9",
+      "redirected": true,
+      "crossDomain": true
+    },
+    {
+      "id": "ca-ontario-archives",
+      "label": "Archives of Ontario",
+      "kind": "homeUrl",
+      "url": "https://www.archives.gov.on.ca/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://validate.perfdrive.com/?ssa=0620af65-af3c-43b4-97a5-4171182dd928&ssb=04268281176&ssc=https%3A%2F%2Fwww.archives.gov.on.ca%2F&ssi=338ec9ba-dajy-41fa-97de-29266611ec65&ssk=botmanager_support@radware.com&ssm=56356214096042865103733658324587&ssn=ea2850a10fd2835e26fddfa5cd9166afe7411d0ac815-b321-423c-be318a&sso=3830f0c2-0e8bc45e134ad6fd3ea00e8698b972bef1b293184b74e395&ssp=10795811591778035510177805839445793&ssq=46536806011172084785260111342198996130334&ssr=MTEyLjIxMy4xODguODM=&sst=Mozilla/5.0%20(compatible;%20GenealogyCatalogVerifier/1.0)&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDAxZDBhYzgxNS1iMzIxLTQyM2MtYjBjMi0wZThiYzQ1ZTEzNGExLTE3NzgwNjAxMTE1MDIwLTAwMzY1ODNlYTYyM2NjOTcxYjgxMCJ9",
+      "redirected": true,
+      "crossDomain": true
+    },
+    {
+      "id": "ca-banq",
+      "label": "Bibliothèque et Archives nationales du Québec (BAnQ)",
+      "kind": "url",
+      "url": "https://www.banq.qc.ca/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://validate.perfdrive.com/56d6dba1ed7630e3755997247e3dd0ba/?ssa=a1f51cea-2a3b-46b2-98f1-3fe1658a7c22&ssb=53994311275&ssc=https%3A%2F%2Fwww.banq.qc.ca%2F&ssi=fe7280da-ch8n-40aa-b55c-063a6d0198db&ssk=botmanager_support@radware.com&ssm=82190567359055978104789100889146&ssn=d14d7dac716da4abb6eb48ec1f47de2d330533cdc0ae-48a4-4c03-8217ea&sso=c8f6c23a-81173d1ebb9ac10bb88d2960790eb0cf316905af8a777305&ssp=75893371401778078416177804965784258&ssq=96579926011241327677760112354461673881981&ssr=MTEyLjIxMy4xODguODM=&sst=Mozilla/5.0%20(compatible;%20GenealogyCatalogVerifier/1.0)&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2Y5MDAwY2EwZjhmMzItMzllMi00NmRmLWE3NjItNTlkZmRmODExMTQyMS0xNzc4MDYwMTEyODE0MC1lYWUzNDNjYmM1MTg5NDYzMTAiLCJyZCI6ImJhbnEucWMuY2EiLCJfX3V6bWYiOiI3ZjkwMDAzM2NkYzBhZS00OGE0LTRjMDMtODIzYS04MTE3M2QxZWJiOWExLTE3NzgwNjAxMTI4MTQwLTAwMzQzYzIxODY1MGVkZmY5OTYxMCJ9",
+      "redirected": true,
+      "crossDomain": true
+    },
+    {
+      "id": "ca-ns-archives",
+      "label": "Nova Scotia Archives",
+      "kind": "url",
+      "url": "https://archives.novascotia.ca/genealogy/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://archives.novascotia.ca/genealogy/",
+      "redirected": false,
+      "crossDomain": false
+    },
+    {
+      "id": "ca-ns-archives",
+      "label": "Nova Scotia Archives",
+      "kind": "homeUrl",
+      "url": "https://archives.novascotia.ca/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://archives.novascotia.ca/",
+      "redirected": false,
+      "crossDomain": false
+    },
+    {
+      "id": "ca-bc-archives",
+      "label": "British Columbia Archives",
+      "kind": "url",
+      "url": "https://search-bcarchives.royalbcmuseum.bc.ca/",
+      "error": "fetch failed"
+    },
+    {
+      "id": "ca-bc-archives",
+      "label": "British Columbia Archives",
+      "kind": "homeUrl",
+      "url": "https://rbcm.ca/research/bc-archives",
+      "status": 404,
+      "ok": false,
+      "finalUrl": "https://rbcm.ca/research/bc-archives",
+      "redirected": false,
+      "crossDomain": false
+    },
+    {
+      "id": "ca-mb-archives",
+      "label": "Archives of Manitoba",
+      "kind": "url",
+      "url": "https://www.gov.mb.ca/chc/archives/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.gov.mb.ca/chc/archives/",
+      "redirected": false,
+      "crossDomain": false
+    },
+    {
+      "id": "ca-sk-archives",
+      "label": "Provincial Archives of Saskatchewan",
+      "kind": "url",
+      "url": "https://www.saskarchives.com/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.saskarchives.com/",
+      "redirected": false,
+      "crossDomain": false
+    },
+    {
+      "id": "ca-sk-archives",
+      "label": "Provincial Archives of Saskatchewan",
+      "kind": "homeUrl",
+      "url": "https://saskarchives.com/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.saskarchives.com/",
+      "redirected": true,
+      "crossDomain": false
+    },
+    {
+      "id": "ca-ab-archives",
+      "label": "Provincial Archives of Alberta",
+      "kind": "url",
+      "url": "https://provincialarchives.alberta.ca/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://provincialarchives.alberta.ca/",
+      "redirected": false,
+      "crossDomain": false
+    },
+    {
+      "id": "ca-nb-archives",
+      "label": "Provincial Archives of New Brunswick",
+      "kind": "url",
+      "url": "https://archives.gnb.ca/",
+      "status": 403,
+      "ok": false,
+      "finalUrl": "https://archives.gnb.ca/",
+      "redirected": false,
+      "crossDomain": false
+    },
+    {
+      "id": "paid-prdh-igd",
+      "label": "PRDH-IGD",
+      "kind": "url",
+      "url": "https://www.prdh-igd.com/en/Home",
+      "error": "fetch failed"
+    },
+    {
+      "id": "paid-prdh-igd",
+      "label": "PRDH-IGD",
+      "kind": "homeUrl",
+      "url": "https://www.prdh-igd.com/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.prdh-igd.com/",
       "redirected": false,
       "crossDomain": false
     }

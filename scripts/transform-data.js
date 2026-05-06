@@ -107,6 +107,32 @@ if (fmpIrish) {
   ];
 }
 
+// Add new sub-collections to existing parents (idempotent — skipped if id exists).
+const newSubCollections = [
+  {
+    parentId: 'paid-findmypast',
+    collection: {
+      id: 'fmp-outbound-passengers',
+      name: 'Britain Outbound Passenger Lists 1890-1960',
+      url: 'https://search.findmypast.co.uk/search-world-records/passenger-lists-leaving-uk-1890-1960',
+      scope: { countries: ['England', 'Wales', 'Scotland', 'Ireland', 'Northern Ireland'] },
+      coverage: [{ events: ['travel'], startYear: 1890, endYear: 1960 }],
+      notes: 'Board of Trade BT 27 — passenger lists for ships departing British ports. Free name-index via TNA Discovery; Findmypast has the searchable images.',
+    },
+  },
+];
+
+for (const { parentId, collection } of newSubCollections) {
+  const parent = data.find((r) => r.id === parentId);
+  if (!parent) continue;
+  parent.collections = parent.collections || [];
+  // Replace if an entry with the same id already exists (so URL/coverage edits
+  // here propagate on re-run); otherwise append.
+  const existingIdx = parent.collections.findIndex((c) => c.id === collection.id);
+  if (existingIdx >= 0) parent.collections[existingIdx] = collection;
+  else parent.collections.push(collection);
+}
+
 // Step 2: extend coverage with new event tags for resources that genuinely cover them.
 // Each entry: id → events to add to *every* coverage entry of that resource.
 const tagAdditions = {
@@ -134,6 +160,8 @@ const tagAdditions = {
   'paid-thegenealogist': ['military', 'legal'],
   // British Newspaper Archive — newspapers cover everything
   'uk-bna': ['employment', 'education', 'military', 'legal', 'other'],
+  // Trove — newspapers carry shipping/travel notices and many other event types.
+  'au-trove': ['travel', 'military', 'employment', 'legal', 'other'],
 };
 
 for (const [id, extra] of Object.entries(tagAdditions)) {
@@ -600,6 +628,333 @@ const newSpecific = [
     bestFor: 'US historical newspapers including African-American papers and Social Security Death Index',
     notes: 'Particularly strong for early American newspapers (pre-1830) and minority-press papers.',
   },
+
+  // --- batch 3: US — national / multi-state ---
+  {
+    id: 'us-nara',
+    resourceName: 'National Archives (NARA) — Genealogy',
+    url: 'https://www.archives.gov/research/genealogy',
+    homeUrl: 'https://www.archives.gov/',
+    accessType: 'free',
+    scope: { countries: ['United States'], alsoCovers: [], stateProvince: null, county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['military', 'travel', 'legal', 'residence', 'employment', 'other'], startYear: 1775, endYear: null }],
+    bestFor: 'US federal records — military service, immigration, naturalization, land, federal census',
+    notes: 'NARA holds the original federal census schedules, military service files, and ship passenger lists. Many digitised collections are indexed via Ancestry/FamilySearch but NARA itself is the authoritative free source.',
+  },
+  {
+    id: 'us-chronicling-america',
+    resourceName: 'Chronicling America',
+    url: 'https://chroniclingamerica.loc.gov/search/pages/results/',
+    homeUrl: 'https://chroniclingamerica.loc.gov/',
+    accessType: 'free',
+    scope: { countries: ['United States'], alsoCovers: [], stateProvince: null, county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['birth', 'marriage', 'death', 'employment', 'military', 'legal', 'other'], startYear: 1690, endYear: 1963 }],
+    bestFor: 'Free full-text search of historic US newspapers',
+    notes: 'Library of Congress project. 22+ million pages from all 50 states, free to search and view.',
+  },
+  {
+    id: 'us-dar',
+    resourceName: 'DAR Genealogical Research Database',
+    url: 'https://services.dar.org/Public/DAR_Research/search_adb/',
+    homeUrl: 'https://www.dar.org/library/genealogical-research',
+    accessType: 'free',
+    scope: { countries: ['United States'], alsoCovers: [], stateProvince: null, county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['military', 'birth', 'marriage', 'death'], startYear: 1700, endYear: 1830 }],
+    bestFor: 'Index of American Revolutionary War patriots and their descendants',
+    notes: 'Free to search the Genealogical Research System — Ancestor Database, Member List, Bible Records, Genealogical Records Committee Reports.',
+  },
+  {
+    id: 'us-castle-garden',
+    resourceName: 'Castle Garden',
+    url: 'https://www.castlegarden.org/searcher.php',
+    homeUrl: 'https://www.castlegarden.org/',
+    accessType: 'free',
+    scope: { countries: ['United States'], alsoCovers: [], stateProvince: null, county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['travel'], startYear: 1820, endYear: 1892 }],
+    bestFor: 'Free index of 11 million immigrants who entered the US through Castle Garden (the pre-Ellis Island port of entry in NYC)',
+    notes: 'Covers the period before Ellis Island opened in 1892. For Ellis-era arrivals (1892-1957) use FamilySearch or Ancestry.',
+  },
+  {
+    id: 'us-civil-war-soldiers',
+    resourceName: 'Civil War Soldiers and Sailors System (NPS)',
+    url: 'https://www.nps.gov/civilwar/soldiers-and-sailors-database.htm',
+    homeUrl: 'https://www.nps.gov/civilwar/',
+    accessType: 'free',
+    scope: { countries: ['United States'], alsoCovers: [], stateProvince: null, county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['military', 'death'], startYear: 1861, endYear: 1865 }],
+    bestFor: 'Free index of 6.3 million US Civil War soldiers and sailors (Union and Confederate)',
+    notes: 'National Park Service project. Includes regimental histories, prisoner records, Medal of Honor recipients, and cemetery information.',
+  },
+  {
+    id: 'us-stevemorse',
+    resourceName: 'Stephen P. Morse — One-Step Webpages',
+    url: 'https://www.stevemorse.org/',
+    homeUrl: 'https://www.stevemorse.org/',
+    accessType: 'free',
+    scope: { countries: ['United States'], alsoCovers: [], stateProvince: null, county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['birth', 'marriage', 'death', 'travel', 'residence', 'military', 'other'], startYear: 1700, endYear: null }],
+    bestFor: 'Smarter search front-ends for Ellis Island, Castle Garden, US census, NYC vital records and many other sites',
+    notes: 'Not a record set — wraps clunky search forms with better UX. Especially useful for soundex-driven Ellis Island searches and NYC vital record indexes.',
+  },
+  {
+    id: 'us-afrigeneas',
+    resourceName: 'AfriGeneas',
+    url: 'http://www.afrigeneas.com/',
+    homeUrl: 'http://www.afrigeneas.com/',
+    accessType: 'free',
+    scope: { countries: ['United States'], alsoCovers: [], stateProvince: null, county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['birth', 'marriage', 'death', 'burial', 'other'], startYear: 1700, endYear: null }],
+    bestFor: 'African American family research — slave records, Freedmen records, surnames, beginner help',
+    notes: 'Volunteer community site. Hosts surname databases, marriage and death indexes, and active research forums.',
+  },
+
+  // --- batch 3: US — state archives ---
+  {
+    id: 'us-ny-archives',
+    resourceName: 'New York State Archives',
+    url: 'http://www.archives.nysed.gov/research/family-history-and-genealogy',
+    homeUrl: 'http://www.archives.nysed.gov/',
+    accessType: 'free',
+    scope: { countries: ['United States'], alsoCovers: [], stateProvince: 'New York', stateAliases: ['NY', 'New York'], county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['legal', 'military', 'travel', 'employment', 'education', 'birth', 'marriage', 'death', 'other'], startYear: 1664, endYear: null }],
+    bestFor: 'New York State records — court, military, land, education, civil service',
+    notes: 'NY did not centralise vital registration until 1880; for earlier vitals see town clerks and FamilySearch.',
+  },
+  {
+    id: 'us-ca-archives',
+    resourceName: 'California State Archives',
+    url: 'https://www.sos.ca.gov/archives/research/',
+    homeUrl: 'https://www.sos.ca.gov/archives/',
+    accessType: 'free',
+    scope: { countries: ['United States'], alsoCovers: [], stateProvince: 'California', stateAliases: ['CA', 'California'], county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['legal', 'military', 'travel', 'employment', 'education', 'other'], startYear: 1850, endYear: null }],
+    bestFor: 'California state records — court, military, prison, land, government employment',
+    notes: 'Held by the Secretary of State. The CA Death Index 1905-1939 is freely searchable on FamilySearch.',
+  },
+  {
+    id: 'us-ma-archives',
+    resourceName: 'Massachusetts Archives',
+    url: 'https://www.sec.state.ma.us/divisions/archives/research/genealogy.htm',
+    homeUrl: 'https://www.sec.state.ma.us/divisions/archives/',
+    accessType: 'free',
+    scope: { countries: ['United States'], alsoCovers: [], stateProvince: 'Massachusetts', stateAliases: ['MA', 'Massachusetts'], county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['legal', 'military', 'travel', 'employment', 'birth', 'marriage', 'death', 'other'], startYear: 1620, endYear: null }],
+    bestFor: 'Massachusetts state records — early colonial records, vital records, military, court',
+    notes: 'MA has continuous vital registration from 1841. Pre-1841 town vitals are covered by AmericanAncestors (NEHGS).',
+  },
+  {
+    id: 'us-pa-archives',
+    resourceName: 'Pennsylvania State Archives',
+    url: 'https://www.phmc.pa.gov/Archives/Research/Pages/Genealogy.aspx',
+    homeUrl: 'https://www.phmc.pa.gov/Archives/',
+    accessType: 'free',
+    scope: { countries: ['United States'], alsoCovers: [], stateProvince: 'Pennsylvania', stateAliases: ['PA', 'Pennsylvania'], county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['legal', 'military', 'travel', 'employment', 'birth', 'marriage', 'death', 'other'], startYear: 1682, endYear: null }],
+    bestFor: 'Pennsylvania state records — military, naturalisation, land, vital records',
+    notes: 'PA Death Certificates 1906-1969 and Birth Certificates 1906-1909 are freely searchable on Ancestry via Pennsylvania State Archives.',
+  },
+  {
+    id: 'us-tx-archives',
+    resourceName: 'Texas State Library and Archives',
+    url: 'https://www.tsl.texas.gov/arc/genealogy.html',
+    homeUrl: 'https://www.tsl.texas.gov/',
+    accessType: 'free',
+    scope: { countries: ['United States'], alsoCovers: [], stateProvince: 'Texas', stateAliases: ['TX', 'Texas'], county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['legal', 'military', 'travel', 'employment', 'birth', 'marriage', 'death', 'other'], startYear: 1836, endYear: null }],
+    bestFor: 'Texas state records — Republic-era documents, Confederate pensions, prison, vital records',
+    notes: 'Civil registration is 1903 onward but county clerks held earlier marriage records. Confederate Pension Applications are indexed online.',
+  },
+  {
+    id: 'us-va-library',
+    resourceName: 'Library of Virginia',
+    url: 'https://www.lva.virginia.gov/public/genealogy.htm',
+    homeUrl: 'https://www.lva.virginia.gov/',
+    accessType: 'free',
+    scope: { countries: ['United States'], alsoCovers: [], stateProvince: 'Virginia', stateAliases: ['VA', 'Virginia'], county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['legal', 'military', 'travel', 'employment', 'birth', 'marriage', 'death', 'other'], startYear: 1607, endYear: null }],
+    bestFor: 'Virginia state records — colonial and early American court, land, military',
+    notes: 'Holds extensive colonial records. Many county order books and chancery causes are digitised and freely searchable.',
+  },
+
+  // --- batch 3: Canada ---
+  {
+    id: 'ca-canadian-headstones',
+    resourceName: 'Canadian Headstones',
+    url: 'https://canadianheadstones.ca/',
+    homeUrl: 'https://canadianheadstones.ca/',
+    accessType: 'free',
+    scope: { countries: ['Canada'], alsoCovers: [], stateProvince: null, county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['death', 'burial'], startYear: 1700, endYear: null }],
+    bestFor: 'Free Canadian cemetery and headstone index with photographs',
+    notes: 'Volunteer-driven; coverage varies by province. Complement to Find a Grave for Canadian burials.',
+  },
+  {
+    id: 'ca-automated-genealogy',
+    resourceName: 'Automated Genealogy',
+    url: 'http://automatedgenealogy.com/',
+    homeUrl: 'http://automatedgenealogy.com/',
+    accessType: 'free',
+    scope: { countries: ['Canada'], alsoCovers: [], stateProvince: null, county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['residence'], startYear: 1851, endYear: 1911 }],
+    bestFor: 'Free name-indexed transcriptions of the Canadian census 1851-1911',
+    notes: 'Volunteer transcriptions of LAC images. Often easier to search than the official LAC interface.',
+  },
+  {
+    id: 'ca-cvwm',
+    resourceName: 'Canadian Virtual War Memorial',
+    url: 'https://www.veterans.gc.ca/eng/remembrance/memorials/canadian-virtual-war-memorial',
+    homeUrl: 'https://www.veterans.gc.ca/',
+    accessType: 'free',
+    scope: { countries: ['Canada'], alsoCovers: [], stateProvince: null, county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['military', 'death', 'burial'], startYear: 1899, endYear: null }],
+    bestFor: 'Free index of Canadians who died in military service from the Boer War onward',
+    notes: 'Veterans Affairs Canada project. Includes service records, photos and burial information for over 118,000 Canadian war dead.',
+  },
+  {
+    id: 'ca-ontario-archives',
+    resourceName: 'Archives of Ontario',
+    url: 'https://www.archives.gov.on.ca/en/family_history/family_history_main.aspx',
+    homeUrl: 'https://www.archives.gov.on.ca/',
+    accessType: 'free',
+    scope: { countries: ['Canada'], alsoCovers: [], stateProvince: 'Ontario', stateAliases: ['ON', 'Ontario'], county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['birth', 'marriage', 'death', 'legal', 'travel', 'military', 'employment', 'education', 'other'], startYear: 1791, endYear: null }],
+    bestFor: 'Ontario provincial records — vital statistics, land, court, education',
+    notes: 'Ontario civil registration: births 1869+, marriages 1801+ (county-held pre-1869), deaths 1869+. Many indexes free via FamilySearch.',
+  },
+  {
+    id: 'ca-banq',
+    resourceName: 'Bibliothèque et Archives nationales du Québec (BAnQ)',
+    url: 'https://www.banq.qc.ca/services/services_specialises/genealogie/',
+    homeUrl: 'https://www.banq.qc.ca/',
+    accessType: 'free',
+    scope: { countries: ['Canada'], alsoCovers: [], stateProvince: 'Quebec', stateAliases: ['QC', 'Quebec', 'Québec'], county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['birth', 'baptism', 'marriage', 'death', 'burial', 'legal', 'travel', 'other'], startYear: 1621, endYear: null }],
+    bestFor: 'Quebec genealogy — Catholic parish registers, notarial records, civil status',
+    notes: 'BAnQ holds the most comprehensive Quebec records. Many Catholic parish registers and notarial collections digitised and free online.',
+  },
+  {
+    id: 'ca-ns-archives',
+    resourceName: 'Nova Scotia Archives',
+    url: 'https://archives.novascotia.ca/genealogy/',
+    homeUrl: 'https://archives.novascotia.ca/',
+    accessType: 'free',
+    scope: { countries: ['Canada'], alsoCovers: [], stateProvince: 'Nova Scotia', stateAliases: ['NS', 'Nova Scotia'], county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['birth', 'marriage', 'death', 'baptism', 'burial', 'legal', 'travel', 'military', 'other'], startYear: 1763, endYear: 1949 }],
+    bestFor: 'Nova Scotia provincial records — births, marriages, deaths, ship passenger lists',
+    notes: 'Excellent free online indexes — births 1864-1924, marriages 1763-1949, deaths 1864-1974 are all searchable with images.',
+  },
+  {
+    id: 'ca-bc-archives',
+    resourceName: 'British Columbia Archives',
+    url: 'https://search-bcarchives.royalbcmuseum.bc.ca/',
+    homeUrl: 'https://royalbcmuseum.bc.ca/research/bc-archives',
+    accessType: 'free',
+    scope: { countries: ['Canada'], alsoCovers: [], stateProvince: 'British Columbia', stateAliases: ['BC', 'British Columbia'], county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['birth', 'marriage', 'death', 'legal', 'travel', 'military', 'employment', 'other'], startYear: 1858, endYear: null }],
+    bestFor: 'British Columbia provincial records — vital statistics, court, land, photographs',
+    notes: 'BC Vital Statistics Agency indexes births, marriages and deaths separately at https://www.vs.gov.bc.ca/. Free with images for older events.',
+  },
+  {
+    id: 'ca-mb-archives',
+    resourceName: 'Archives of Manitoba',
+    url: 'https://www.gov.mb.ca/chc/archives/',
+    homeUrl: 'https://www.gov.mb.ca/chc/archives/',
+    accessType: 'free',
+    scope: { countries: ['Canada'], alsoCovers: [], stateProvince: 'Manitoba', stateAliases: ['MB', 'Manitoba'], county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['birth', 'marriage', 'death', 'legal', 'travel', 'military', 'employment', 'other'], startYear: 1820, endYear: null }],
+    bestFor: 'Manitoba provincial records — Hudson\'s Bay Company, Métis scrip, civil registration',
+    notes: 'Holds the unique Hudson\'s Bay Company Archives, important for fur trade and Métis ancestry.',
+  },
+  {
+    id: 'ca-sk-archives',
+    resourceName: 'Provincial Archives of Saskatchewan',
+    url: 'https://saskarchives.com/family-history',
+    homeUrl: 'https://saskarchives.com/',
+    accessType: 'free',
+    scope: { countries: ['Canada'], alsoCovers: [], stateProvince: 'Saskatchewan', stateAliases: ['SK', 'Saskatchewan'], county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['birth', 'marriage', 'death', 'legal', 'travel', 'employment', 'other'], startYear: 1878, endYear: null }],
+    bestFor: 'Saskatchewan provincial records — homestead files, school, vital statistics',
+    notes: 'Homestead Files (1872-1930) are particularly useful for tracing land grants to settlers.',
+  },
+  {
+    id: 'ca-ab-archives',
+    resourceName: 'Provincial Archives of Alberta',
+    url: 'https://provincialarchives.alberta.ca/',
+    homeUrl: 'https://provincialarchives.alberta.ca/',
+    accessType: 'free',
+    scope: { countries: ['Canada'], alsoCovers: [], stateProvince: 'Alberta', stateAliases: ['AB', 'Alberta'], county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['birth', 'marriage', 'death', 'legal', 'travel', 'employment', 'education', 'other'], startYear: 1870, endYear: null }],
+    bestFor: 'Alberta provincial records — homestead, school, court, vital statistics',
+    notes: 'Free online catalogue. Vital records (1898-1970s) are managed separately by Alberta Vital Statistics.',
+  },
+  {
+    id: 'ca-nb-archives',
+    resourceName: 'Provincial Archives of New Brunswick',
+    url: 'https://archives.gnb.ca/',
+    homeUrl: 'https://archives.gnb.ca/',
+    accessType: 'free',
+    scope: { countries: ['Canada'], alsoCovers: [], stateProvince: 'New Brunswick', stateAliases: ['NB', 'New Brunswick'], county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['birth', 'marriage', 'death', 'baptism', 'burial', 'legal', 'travel', 'military', 'other'], startYear: 1784, endYear: null }],
+    bestFor: 'New Brunswick provincial records — Loyalist arrivals, Acadian records, vital statistics',
+    notes: 'Excellent free online indexes including vital statistics (1888-1965), late registrations and county marriage registers.',
+  },
+  {
+    id: 'paid-prdh-igd',
+    resourceName: 'PRDH-IGD',
+    url: 'https://www.prdh-igd.com/en/Home',
+    homeUrl: 'https://www.prdh-igd.com/',
+    accessType: 'paid',
+    scope: { countries: ['Canada'], alsoCovers: [], stateProvince: 'Quebec', stateAliases: ['QC', 'Quebec', 'Québec'], county: null, parish: null, religion: 'Catholic' },
+    coverage: [{ events: ['birth', 'baptism', 'marriage', 'death', 'burial'], startYear: 1621, endYear: 1865 }],
+    bestFor: 'Reconstructed family files for every Quebec Catholic to 1865',
+    notes: 'Université de Montréal project. The most comprehensive linked dataset for Quebec Catholic ancestry — pay-per-request or subscription.',
+  },
+
+  // --- batch 4: Australian convict + immigration ---
+  {
+    id: 'au-convict-records',
+    resourceName: 'Convict Records of Australia',
+    url: 'https://convictrecords.com.au/',
+    homeUrl: 'https://convictrecords.com.au/',
+    accessType: 'free',
+    scope: { countries: ['Australia', 'England', 'Wales', 'Scotland', 'Ireland'], alsoCovers: [], stateProvince: null, county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['legal', 'travel'], startYear: 1788, endYear: 1868 }],
+    bestFor: 'Free aggregated index of British and Irish convicts transported to Australia',
+    notes: 'Volunteer-driven; pulls together transportation records, ship arrival lists and conduct registers across all penal colonies (NSW, VDL, WA).',
+  },
+  {
+    id: 'au-founders-survivors',
+    resourceName: 'Founders and Survivors',
+    url: 'https://www.foundersandsurvivors.org/',
+    homeUrl: 'https://www.foundersandsurvivors.org/',
+    accessType: 'free',
+    scope: { countries: ['Australia'], alsoCovers: [], stateProvince: 'Tasmania', stateAliases: ['TAS', 'Tasmania'], county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['legal', 'travel', 'birth', 'marriage', 'death', 'other'], startYear: 1803, endYear: 1920 }],
+    bestFor: 'Academic project linking Tasmanian convicts to their descendants',
+    notes: 'University of Tasmania research project. Connects convict records, vital events, and family-history submissions; particularly powerful for tracing descendants of Van Diemen\'s Land convicts.',
+  },
+  {
+    id: 'au-passengers-history',
+    resourceName: 'Passengers in History',
+    url: 'https://passengersinhistory.sa.gov.au/',
+    homeUrl: 'https://passengersinhistory.sa.gov.au/',
+    accessType: 'free',
+    scope: { countries: ['Australia'], alsoCovers: [], stateProvince: 'South Australia', stateAliases: ['SA', 'South Australia'], county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['travel'], startYear: 1836, endYear: 1900 }],
+    bestFor: 'Free name-search index of South Australian passenger arrivals',
+    notes: 'Hosted by the South Australian Maritime Museum. Combines assisted and unassisted arrivals and links to original ship and voyage details.',
+  },
+  {
+    id: 'au-mariners-ships',
+    resourceName: 'Mariners and Ships in Australian Waters (NSW)',
+    url: 'https://mariners.records.nsw.gov.au/',
+    homeUrl: 'https://mariners.records.nsw.gov.au/',
+    accessType: 'free',
+    scope: { countries: ['Australia'], alsoCovers: [], stateProvince: 'New South Wales', stateAliases: ['NSW', 'New South Wales'], county: null, parish: null, religion: 'any' },
+    coverage: [{ events: ['travel', 'employment'], startYear: 1788, endYear: 1900 }],
+    bestFor: 'Free index of seamen and ships visiting NSW ports',
+    notes: 'Originally hosted by NSW State Records, now under MHNSW. Useful for ancestors who served on or arrived via shipping into Sydney and other NSW ports.',
+  },
 ];
 
 for (const r of newSpecific) {
@@ -672,6 +1027,32 @@ const resourceUrlFixes = {
     url: 'https://uk.forceswarrecords.com/search',
     homeUrl: 'https://uk.forceswarrecords.com/',
   },
+
+  // --- batch 3 corrections ---
+  // Chronicling America moved under loc.gov/collections.
+  'us-chronicling-america': {
+    url: 'https://www.loc.gov/collections/chronicling-america/',
+    homeUrl: 'https://www.loc.gov/collections/chronicling-america/',
+  },
+  // NY State Archives family-history page 404s; use the archives homepage.
+  'us-ny-archives': { url: 'http://www.archives.nysed.gov/' },
+  // California State Archives — research path 404s either way; use the archives homepage.
+  'us-ca-archives': { url: 'https://www.sos.ca.gov/archives/' },
+  // Pennsylvania State Archives moved under pa.gov.
+  'us-pa-archives': {
+    url: 'https://www.pa.gov/agencies/phmc',
+    homeUrl: 'https://www.pa.gov/agencies/phmc',
+  },
+  // Library of Virginia genealogy.htm is gone; use homepage.
+  'us-va-library': { url: 'https://www.lva.virginia.gov/' },
+  // Archives of Ontario deep path is gone; use the section homepage.
+  'ca-ontario-archives': { url: 'https://www.archives.gov.on.ca/en/family_history/' },
+  // BAnQ deep path 404s; use the homepage where genealogy navigation lives.
+  'ca-banq': { url: 'https://www.banq.qc.ca/' },
+  // BC Archives moved from royalbcmuseum.bc.ca to rbcm.ca.
+  'ca-bc-archives': { homeUrl: 'https://rbcm.ca/research/bc-archives' },
+  // Saskatchewan Archives /family-history path 404s; use homepage.
+  'ca-sk-archives': { url: 'https://www.saskarchives.com/' },
 };
 
 const collectionUrlFixes = {
