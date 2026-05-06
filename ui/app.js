@@ -344,3 +344,18 @@ if (Array.isArray(window.GENEALOGY_RESOURCES)) {
   submitButton.textContent = 'Resource data missing — check the script tag';
   console.error('window.GENEALOGY_RESOURCES is not defined. Make sure resources/genealogy-free-resources.js loaded before app.js.');
 }
+(function prefillFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  if (![...params.keys()].length) return;
+  ['eventType','country','stateProvince','county','townParish','rangeStartYear','rangeEndYear','religion'].forEach(id => {
+    const v = params.get(id);
+    if (v == null) return;
+    const el = document.getElementById(id);
+    if (el) el.value = v;
+  });
+  if (params.get('autosubmit') === '1' && resourceIndex.length > 0
+      && document.getElementById('eventType').value
+      && document.getElementById('country').value) {
+    searchForm.dispatchEvent(new Event('submit', { cancelable: true }));
+  }
+})();
